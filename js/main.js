@@ -158,7 +158,7 @@ const terminalResponses = {
  Title   : Application Support Engineer – Linux & MySQL
  Email   : aishwar253@outlook.com
  Phone   : +91 8691 805492
- Location: Thane, Maharashtra, India
+ Location: Mumbai, Maharashtra, India
  LinkedIn: linkedin.com/in/aishwar-yadav
  GitHub  : github.com/aishwar2`
 };

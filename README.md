@@ -127,4 +127,4 @@ Then open your browser and navigate to:
 - **Phone**: +91 8691 805492
 - **LinkedIn**: [linkedin.com/in/aishwar-yadav](https://linkedin.com/in/aishwar-yadav)
 - **GitHub**: [github.com/aishwar2](https://github.com/aishwar2)
-- **Location**: Thane, Maharashtra, India
+- **Location**: Mumbai, Maharashtra, India
