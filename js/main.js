@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
    -------------------------------------------------------------------------- */
 function initTheme() {
   const themeToggle = document.getElementById('theme-toggle');
-  const storedTheme = localStorage.getItem('ay-theme') || 'dark';
+  const storedTheme = localStorage.getItem('ay-theme') || 'light';
 
   document.documentElement.setAttribute('data-theme', storedTheme);
   updateThemeIcon(storedTheme);
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('ay-theme', newTheme);

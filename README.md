@@ -1,9 +1,9 @@
 # Aishwar Yadav — Professional Engineering Portfolio & GitHub Pages Site
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-38bdf8?style=flat&logo=github)](https://aishwar2.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-38bdf8?style=flat&logo=github)](https://aishwar2.github.io/mysite/)
 [![Role](https://img.shields.io/badge/Role-Application%20Support%20Engineer-10b981?style=flat)](https://linkedin.com/in/aishwar-yadav)
-[![Linux](https://img.shields.io/badge/Fleet-250%2B%20RHEL%20Nodes-f59e0b?style=flat&logo=redhat)](https://aishwar2.github.io/)
-[![MySQL](https://img.shields.io/badge/Database-MySQL%208.4%2F9.7-0284c7?style=flat&logo=mysql)](https://aishwar2.github.io/)
+[![Linux](https://img.shields.io/badge/Fleet-250%2B%20RHEL%20Nodes-f59e0b?style=flat&logo=redhat)](https://aishwar2.github.io/mysite/)
+[![MySQL](https://img.shields.io/badge/Database-MySQL%208.4%2F9.7-0284c7?style=flat&logo=mysql)](https://aishwar2.github.io/mysite/)
 
 A high-performance, responsive personal engineering portfolio designed specifically for **Aishwar Yadav** (Application Support Engineer – Linux & MySQL). Built to showcase production reliability, low-latency kernel tuning, enterprise MySQL replication, and 6+ years of mission-critical systems support to recruiters and hiring managers.
 
@@ -11,8 +11,8 @@ A high-performance, responsive personal engineering portfolio designed specifica
 
 ## 🚀 Live Demo & Repository Setup
 
-When published to your GitHub account (`aishwar2`), your site will be live at:
-👉 **`https://aishwar2.github.io/`**
+When published to your GitHub account (`aishwar2`), your site is live at:
+👉 **`https://aishwar2.github.io/mysite/`**
 
 ---
 
