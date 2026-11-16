@@ -753,10 +753,6 @@ button {
 /* ==========================================================================
    TECH STACK SECTION (Marquee Banner + Categorized Grid)
    ========================================================================== */
-#tech-stack {
-  padding-top: 2.5rem;
-}
-
 .marquee-container {
   overflow: hidden;
   position: relative;
