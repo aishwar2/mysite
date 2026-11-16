@@ -46,10 +46,10 @@
 
       <nav class="nav-links" id="nav-links">
         <a href="#hero" class="nav-link active">About</a>
-        <a href="#projects" class="nav-link">Highlights &amp; Projects</a>
-        <a href="#education" class="nav-link">Education</a>
         <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
         <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Highlights &amp; Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-primary btn-sm mobile-only-resume">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -298,468 +298,7 @@
   </section>
 
   <!-- =========================================================================
-       1. KEY ARCHITECTURAL HIGHLIGHTS & OPEN-SOURCE GIT PROJECTS
-       ========================================================================= -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Systems &amp; Code Showcase</span>
-        <h2 class="section-title">Key Architectural Highlights &amp; Projects</h2>
-        <p class="section-subtitle">
-          Enterprise mission-critical production case studies and open-source infrastructure tools from GitHub.
-        </p>
-      </div>
-
-      <!-- Subsection A: Enterprise Production Case Studies -->
-      <div class="project-subheading">
-        <div class="project-subheading-title">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-            <line x1="6" y1="6" x2="6.01" y2="6"></line>
-            <line x1="6" y1="18" x2="6.01" y2="18"></line>
-          </svg>
-          <span>Enterprise Architectural Case Studies</span>
-        </div>
-        <span class="project-subheading-badge">Financial Fleets &amp; High Availability</span>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Highlight 1: Low Latency Kernel & Onload -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge low-latency">Ultra-Low Latency</span>
-            <span class="project-sla">0% Dropped Packets</span>
-          </div>
-          <h3 class="project-title">Kernel Bypass &amp; Multicast Feed Tuning for Trading Platforms</h3>
-          <p class="project-desc">
-            Configured Solarflare Onload network acceleration on enterprise RHEL servers running low-latency financial trading platforms. Tuned kernel parameters (<code style="color:var(--accent-cyan);">sysctl</code>), isolated CPU core pinning, configured NUMA node bindings, and maximized network ring buffers to eliminate jitter across high-throughput multicast market feeds.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Jitter &amp; Packet Drop:</span>
-              <span class="project-metric-val">Eliminated across market feeds</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Network Stack:</span>
-              <span class="project-metric-val">Solarflare Onload Kernel Bypass</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Kernel Parameters:</span>
-              <span class="project-metric-val">sysctl, isolcpus, numa_node</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">RHEL 8/9</span>
-            <span class="tech-pill">Solarflare Onload</span>
-            <span class="tech-pill">NUMA</span>
-            <span class="tech-pill">CPU Pinning</span>
-            <span class="tech-pill">Multicast</span>
-          </div>
-        </div>
-
-        <!-- Highlight 2: Major Fleet OS Migration -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge migration">Zero Downtime Migration</span>
-            <span class="project-sla">250+ Servers Upgraded</span>
-          </div>
-          <h3 class="project-title">In-Place RHEL 7.9 to 8.10 Fleet Migration via Leapp &amp; Satellite</h3>
-          <p class="project-desc">
-            Planned, orchestrated, and executed large-scale in-place operating system upgrades across a fleet of 250+ enterprise servers using the Leapp utility and Red Hat Satellite. Conducted rigorous pre-flight dependency audits, application binary validations, and automated rollback points with zero service interruption.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Unplanned Downtime:</span>
-              <span class="project-metric-val">0 minutes (100% SLA compliance)</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Fleet Scope:</span>
-              <span class="project-metric-val">250+ Enterprise RHEL Servers</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Tooling:</span>
-              <span class="project-metric-val">Leapp Utility, Red Hat Satellite, LVM</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">RHEL 7.9 -> 8.10</span>
-            <span class="tech-pill">Leapp</span>
-            <span class="tech-pill">Red Hat Satellite</span>
-            <span class="tech-pill">Ansible</span>
-            <span class="tech-pill">LVM</span>
-          </div>
-        </div>
-
-        <!-- Highlight 3: Production MySQL High Availability -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge database">Database High Availability</span>
-            <span class="project-sla">25+ DB Clusters</span>
-          </div>
-          <h3 class="project-title">Production MySQL Fleet Upgrades, GTID Replication &amp; PITR</h3>
-          <p class="project-desc">
-            Spearheaded production MySQL upgrades from version 8.4 to 9.7 with automated pre-upgrade schema checks and zero data loss. Maintained source-replica replication topologies, promptly resolving GTID discrepancies and replication lag. Implemented physical/logical automated backup routines via Percona XtraBackup and mysqldump with routine Point-in-Time Recovery (PITR) restorations.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Data Loss Incident Rate:</span>
-              <span class="project-metric-val">0% (Zero Data Loss)</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Replication Model:</span>
-              <span class="project-metric-val">Source-Replica with GTID &amp; Binlogs</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Backup &amp; Recovery:</span>
-              <span class="project-metric-val">Percona XtraBackup + Verified PITR</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">MySQL 8.4 &amp; 9.7</span>
-            <span class="tech-pill">Percona XtraBackup</span>
-            <span class="tech-pill">GTID</span>
-            <span class="tech-pill">EXPLAIN PLAN</span>
-            <span class="tech-pill">Query Tuning</span>
-          </div>
-        </div>
-
-        <!-- Highlight 4: 45-min DC-DR Failover & Automation -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge automation">Disaster Recovery</span>
-            <span class="project-sla">45-Min Benchmark</span>
-          </div>
-          <h3 class="project-title">Enterprise DC-to-DR Failover &amp; Fleet Automation Architecture</h3>
-          <p class="project-desc">
-            Achieved and validated a 45-minute Data Center (DC) to Disaster Recovery (DR) failover benchmark under stringent SLAs. Automated daily server health checks, log rotations, disk alerts, and configuration deployments using Ansible and custom Bash scripts, slashing repetitive manual operational toil by 60%.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">DR Failover Target:</span>
-              <span class="project-metric-val">Achieved 45-min failover benchmark</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Operational Toil Reduction:</span>
-              <span class="project-metric-val">60% manual tasks automated</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Secrets Management:</span>
-              <span class="project-metric-val">Ansible Vault encrypted variables</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Disaster Recovery</span>
-            <span class="tech-pill">Bash Scripting</span>
-            <span class="tech-pill">Ansible Vault</span>
-            <span class="tech-pill">Nagios XI</span>
-            <span class="tech-pill">LVM</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Subsection B: Open-Source GitHub Engineering Projects -->
-      <div class="project-subheading">
-        <div class="project-subheading-title">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-          <span>Open-Source GitHub Engineering Projects</span>
-        </div>
-        <span class="project-subheading-badge">github.com/aishwar2</span>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Git Project 1: MCX Heat Map -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge github">Docker &amp; LDAP</span>
-            <a href="https://github.com/aishwar2/mcx-heat-map" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
-              <span>github.com/aishwar2/mcx-heat-map</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">MCX Commodities Heat Map with Dockerized Nginx &amp; LDAP Auth</h3>
-          <p class="project-desc">
-            Production-engineered financial commodity visualization platform built with containerized microservices. Orchestrates Nginx reverse proxy with SSL termination, enterprise OpenLDAP role authentication, and integrates directly with Linux <code>systemd</code> daemon supervisor (<code>mcx-heatmap.service</code>) for continuous automated uptime and restart policies.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Service Architecture:</span>
-              <span class="project-metric-val">Docker Compose + Nginx Reverse Proxy</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Authentication Engine:</span>
-              <span class="project-metric-val">OpenLDAP Directory (bootstrap.ldif)</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Daemon Supervision:</span>
-              <span class="project-metric-val">systemd unit (mcx-heatmap.service)</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Docker Compose</span>
-            <span class="tech-pill">Nginx</span>
-            <span class="tech-pill">OpenLDAP</span>
-            <span class="tech-pill">systemd</span>
-            <span class="tech-pill">Python</span>
-            <span class="tech-pill">JavaScript</span>
-          </div>
-          <div class="project-footer-actions">
-            <a href="https://github.com/aishwar2/mcx-heat-map" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>View Repository on GitHub</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Git Project 2: Web System Monitoring -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge github">Telemetry &amp; Observability</span>
-            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
-              <span>github.com/aishwar2/...web-system-monitoring</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">Flask Web System Telemetry &amp; Linux Health Dashboard</h3>
-          <p class="project-desc">
-            A lightweight, real-time Linux infrastructure observability agent containerized with Docker. Captures kernel OS metrics, CPU core utilization, memory thresholds, disk storage capacity across volumes, and hardware thermal sensors for rapid triage and proactive alert detection.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Monitored Telemetry:</span>
-              <span class="project-metric-val">CPU, RAM, Disks, Sensors, OS Info</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Packaging &amp; Portability:</span>
-              <span class="project-metric-val">Zero-dependency Docker container</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">App Framework:</span>
-              <span class="project-metric-val">Python 3 / Flask Microservice</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Python 3</span>
-            <span class="tech-pill">Flask</span>
-            <span class="tech-pill">Docker</span>
-            <span class="tech-pill">Linux Sensors</span>
-            <span class="tech-pill">REST API</span>
-          </div>
-          <div class="project-footer-actions">
-            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>View Repository on GitHub</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Git Project 3: Linux_Dashbord -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge github">Fleet Monitoring &amp; Bash</span>
-            <a href="https://github.com/aishwar2/Linux_Dashbord" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
-              <span>github.com/aishwar2/Linux_Dashbord</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">Multi-Node Linux Dashboard (Node.js &amp; Automated Bash Probes)</h3>
-          <p class="project-desc">
-            Distributed Linux server monitoring system designed for high node counts. Employs lightweight, non-intrusive automated Bash probe scripts (<code>collect.sh</code>) to sample system health and stream metrics into an event-driven Node.js dashboard with structured CSV time-series logging.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Collector Engine:</span>
-              <span class="project-metric-val">Automated Bash Probes (collect.sh)</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Backend Runtime:</span>
-              <span class="project-metric-val">Node.js Event Aggregator</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Data Persistence:</span>
-              <span class="project-metric-val">Structured CSV Time-Series spooling</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Bash</span>
-            <span class="tech-pill">Node.js</span>
-            <span class="tech-pill">Cron</span>
-            <span class="tech-pill">CSV Storage</span>
-            <span class="tech-pill">Fleet KPIs</span>
-          </div>
-          <div class="project-footer-actions">
-            <a href="https://github.com/aishwar2/Linux_Dashbord" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>View Repository on GitHub</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Git Project 4: rocky_linux9.8 -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge github">Enterprise Linux &amp; Toolchain</span>
-            <a href="https://github.com/aishwar2/rocky_linux9.8" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
-              <span>github.com/aishwar2/rocky_linux9.8</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">Rocky Linux 9.8 Custom Enterprise Live ISO Builder</h3>
-          <p class="project-desc">
-            Automated Bash pipeline (<code>build_live_iso.sh</code>) to generate standalone bootable enterprise Linux images. Decouples proprietary Red Hat subscription registration from RHEL ISOs and configures clean Rocky Linux upstream repositories for isolated testbed staging, DR recovery testing, and fleet verification.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Automation Script:</span>
-              <span class="project-metric-val">build_live_iso.sh toolchain</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">OS Base:</span>
-              <span class="project-metric-val">RHEL 9.8 / Rocky Linux 9.8</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Use Case:</span>
-              <span class="project-metric-val">DR Validation &amp; Isolated Lab Staging</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Bash Pipeline</span>
-            <span class="tech-pill">RHEL 9.8</span>
-            <span class="tech-pill">Rocky Linux</span>
-            <span class="tech-pill">Live ISO</span>
-            <span class="tech-pill">LVM / Storage</span>
-          </div>
-          <div class="project-footer-actions">
-            <a href="https://github.com/aishwar2/rocky_linux9.8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>View Repository on GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       2. EDUCATION & CERTIFICATIONS
-       ========================================================================= -->
-  <section class="section" id="education">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Academic Background &amp; Credentials</span>
-        <h2 class="section-title">Education &amp; Professional Certifications</h2>
-        <p class="section-subtitle">
-          Academic foundation in Information Technology combined with verified cloud, Linux, and database credentials.
-        </p>
-      </div>
-
-      <!-- Education Banner -->
-      <div class="education-banner" style="margin-bottom: 2.5rem;">
-        <div class="edu-main">
-          <div class="edu-icon">🎓</div>
-          <div>
-            <div class="edu-degree">Bachelor of Science in Information Technology (B.Sc. IT)</div>
-            <div class="edu-uni">University of Mumbai, Mumbai, Maharashtra, India</div>
-          </div>
-        </div>
-        <div>
-          <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-outline btn-sm">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>View in Resume</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="certs-grid">
-        <div class="cert-card">
-          <div class="cert-icon">☸️</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Certified Kubernetes Administrator (CKA)</h4>
-            <div class="cert-issuer">Linux Foundation / CNCF</div>
-            <span class="cert-status in-progress">In Progress</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">🗄️</div>
-          <div class="cert-info">
-            <h4 class="cert-title">MySQL Administration &amp; Query Optimization</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">🐧</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Linux Systems Administration &amp; Nginx</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">⚙️</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Ansible Infrastructure Automation</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">📦</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Kubernetes Fundamentals</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">🐙</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Career Essentials in GitHub Professional</h4>
-            <div class="cert-issuer">GitHub</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       3. WORK EXPERIENCE TIMELINE
+       1. WORK EXPERIENCE TIMELINE
        ========================================================================= -->
   <section class="section section-alt" id="experience">
     <div class="container">
@@ -918,9 +457,101 @@
   </section>
 
   <!-- =========================================================================
-       4. TECHNICAL COMPETENCIES
+       2. EDUCATION & CERTIFICATIONS
        ========================================================================= -->
-  <section class="section" id="skills">
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Background &amp; Credentials</span>
+        <h2 class="section-title">Education &amp; Professional Certifications</h2>
+        <p class="section-subtitle">
+          Academic foundation in Information Technology combined with verified cloud, Linux, and database credentials.
+        </p>
+      </div>
+
+      <!-- Education Banner -->
+      <div class="education-banner" style="margin-bottom: 2.5rem;">
+        <div class="edu-main">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <div class="edu-degree">Bachelor of Science in Information Technology (B.Sc. IT)</div>
+            <div class="edu-uni">University of Mumbai, Thane, Maharashtra, India</div>
+          </div>
+        </div>
+        <div>
+          <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-outline btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>View in Resume</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">☸️</div>
+          <div class="cert-info">
+            <h4 class="cert-title">Certified Kubernetes Administrator (CKA)</h4>
+            <div class="cert-issuer">Linux Foundation / CNCF</div>
+            <span class="cert-status in-progress">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🗄️</div>
+          <div class="cert-info">
+            <h4 class="cert-title">MySQL Administration &amp; Query Optimization</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status completed">Verified</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🐧</div>
+          <div class="cert-info">
+            <h4 class="cert-title">Linux Systems Administration &amp; Nginx</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status completed">Verified</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">⚙️</div>
+          <div class="cert-info">
+            <h4 class="cert-title">Ansible Infrastructure Automation</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status completed">Verified</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">📦</div>
+          <div class="cert-info">
+            <h4 class="cert-title">Kubernetes Fundamentals</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status completed">Verified</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🐙</div>
+          <div class="cert-info">
+            <h4 class="cert-title">Career Essentials in GitHub Professional</h4>
+            <div class="cert-issuer">GitHub</div>
+            <span class="cert-status completed">Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. TECHNICAL COMPETENCIES
+       ========================================================================= -->
+  <section class="section section-alt" id="skills">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Core Technical Toolkit</span>
@@ -1092,6 +723,327 @@
           <p class="skill-notes">
             Expert in rapid log investigation, proactive health alerts, and executing complex disaster recovery drills within tight benchmark windows.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. KEY ARCHITECTURAL HIGHLIGHTS & OPEN-SOURCE GIT PROJECTS
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Systems &amp; Code Showcase</span>
+        <h2 class="section-title">Key Architectural Highlights &amp; Projects</h2>
+        <p class="section-subtitle">
+          Enterprise mission-critical production case studies and open-source infrastructure tools from GitHub.
+        </p>
+      </div>
+
+      <!-- Subsection A: Enterprise Production Case Studies -->
+      <div class="project-subheading">
+        <div class="project-subheading-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+          <span>Enterprise Architectural Case Studies</span>
+        </div>
+        <span class="project-subheading-badge">Financial Fleets &amp; High Availability</span>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Highlight 1: Low Latency Kernel & Onload -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge low-latency">Ultra-Low Latency</span>
+            <span class="project-sla">0% Dropped Packets</span>
+          </div>
+          <h3 class="project-title">Kernel Bypass &amp; Multicast Feed Tuning for Trading Platforms</h3>
+          <p class="project-desc">
+            Configured Solarflare Onload network acceleration on enterprise RHEL servers running low-latency financial trading platforms. Tuned kernel parameters (<code style="color:var(--accent-cyan);">sysctl</code>), isolated CPU core pinning, configured NUMA node bindings, and maximized network ring buffers to eliminate jitter across high-throughput multicast market feeds.
+          </p>
+          <div class="project-metrics-box">
+            <div class="project-metric-item">
+              <span class="project-metric-name">Jitter &amp; Packet Drop:</span>
+              <span class="project-metric-val">Eliminated across market feeds</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Network Stack:</span>
+              <span class="project-metric-val">Solarflare Onload Kernel Bypass</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Kernel Parameters:</span>
+              <span class="project-metric-val">sysctl, isolcpus, numa_node</span>
+            </div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-pill">RHEL 8/9</span>
+            <span class="tech-pill">Solarflare Onload</span>
+            <span class="tech-pill">NUMA</span>
+            <span class="tech-pill">CPU Pinning</span>
+            <span class="tech-pill">Multicast</span>
+          </div>
+        </div>
+
+        <!-- Highlight 2: Major Fleet OS Migration -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge migration">Zero Downtime Migration</span>
+            <span class="project-sla">250+ Servers Upgraded</span>
+          </div>
+          <h3 class="project-title">In-Place RHEL 7.9 to 8.10 Fleet Migration via Leapp &amp; Satellite</h3>
+          <p class="project-desc">
+            Planned, orchestrated, and executed large-scale in-place operating system upgrades across a fleet of 250+ enterprise servers using the Leapp utility and Red Hat Satellite. Conducted rigorous pre-flight dependency audits, application binary validations, and automated rollback points with zero service interruption.
+          </p>
+          <div class="project-metrics-box">
+            <div class="project-metric-item">
+              <span class="project-metric-name">Unplanned Downtime:</span>
+              <span class="project-metric-val">0 minutes (100% SLA compliance)</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Fleet Scope:</span>
+              <span class="project-metric-val">250+ Enterprise RHEL Servers</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Tooling:</span>
+              <span class="project-metric-val">Leapp Utility, Red Hat Satellite, LVM</span>
+            </div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-pill">RHEL 7.9 -> 8.10</span>
+            <span class="tech-pill">Leapp</span>
+            <span class="tech-pill">Red Hat Satellite</span>
+            <span class="tech-pill">Ansible</span>
+            <span class="tech-pill">LVM</span>
+          </div>
+        </div>
+
+        <!-- Highlight 3: Production MySQL High Availability -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge database">Database High Availability</span>
+            <span class="project-sla">25+ DB Clusters</span>
+          </div>
+          <h3 class="project-title">Production MySQL Fleet Upgrades, GTID Replication &amp; PITR</h3>
+          <p class="project-desc">
+            Spearheaded production MySQL upgrades from version 8.4 to 9.7 with automated pre-upgrade schema checks and zero data loss. Maintained source-replica replication topologies, promptly resolving GTID discrepancies and replication lag. Implemented physical/logical automated backup routines via Percona XtraBackup and mysqldump with routine Point-in-Time Recovery (PITR) restorations.
+          </p>
+          <div class="project-metrics-box">
+            <div class="project-metric-item">
+              <span class="project-metric-name">Data Loss Incident Rate:</span>
+              <span class="project-metric-val">0% (Zero Data Loss)</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Replication Model:</span>
+              <span class="project-metric-val">Source-Replica with GTID &amp; Binlogs</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Backup &amp; Recovery:</span>
+              <span class="project-metric-val">Percona XtraBackup + Verified PITR</span>
+            </div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-pill">MySQL 8.4 &amp; 9.7</span>
+            <span class="tech-pill">Percona XtraBackup</span>
+            <span class="tech-pill">GTID</span>
+            <span class="tech-pill">EXPLAIN PLAN</span>
+            <span class="tech-pill">Query Tuning</span>
+          </div>
+        </div>
+
+        <!-- Highlight 4: 45-min DC-DR Failover & Automation -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge automation">Disaster Recovery</span>
+            <span class="project-sla">45-Min Benchmark</span>
+          </div>
+          <h3 class="project-title">Enterprise DC-to-DR Failover &amp; Fleet Automation Architecture</h3>
+          <p class="project-desc">
+            Achieved and validated a 45-minute Data Center (DC) to Disaster Recovery (DR) failover benchmark under stringent SLAs. Automated daily server health checks, log rotations, disk alerts, and configuration deployments using Ansible and custom Bash scripts, slashing repetitive manual operational toil by 60%.
+          </p>
+          <div class="project-metrics-box">
+            <div class="project-metric-item">
+              <span class="project-metric-name">DR Failover Target:</span>
+              <span class="project-metric-val">Achieved 45-min failover benchmark</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Operational Toil Reduction:</span>
+              <span class="project-metric-val">60% manual tasks automated</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Secrets Management:</span>
+              <span class="project-metric-val">Ansible Vault encrypted variables</span>
+            </div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-pill">Disaster Recovery</span>
+            <span class="tech-pill">Bash Scripting</span>
+            <span class="tech-pill">Ansible Vault</span>
+            <span class="tech-pill">Nagios XI</span>
+            <span class="tech-pill">LVM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subsection B: Open-Source GitHub Engineering Projects -->
+      <div class="project-subheading">
+        <div class="project-subheading-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          <span>Open-Source GitHub Engineering Projects</span>
+        </div>
+        <span class="project-subheading-badge">github.com/aishwar2</span>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Git Project 1: Web System Monitoring -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge github">Telemetry &amp; Observability</span>
+            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
+              <span>github.com/aishwar2/...web-system-monitoring</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-title">Flask Web System Telemetry &amp; Linux Health Dashboard</h3>
+          <p class="project-desc">
+            A lightweight, real-time Linux infrastructure observability agent containerized with Docker. Captures kernel OS metrics, CPU core utilization, memory thresholds, disk storage capacity across volumes, and hardware thermal sensors for rapid triage and proactive alert detection.
+          </p>
+          <div class="project-metrics-box">
+            <div class="project-metric-item">
+              <span class="project-metric-name">Monitored Telemetry:</span>
+              <span class="project-metric-val">CPU, RAM, Disks, Sensors, OS Info</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Packaging &amp; Portability:</span>
+              <span class="project-metric-val">Zero-dependency Docker container</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">App Framework:</span>
+              <span class="project-metric-val">Python 3 / Flask Microservice</span>
+            </div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-pill">Python 3</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Linux Sensors</span>
+            <span class="tech-pill">REST API</span>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>View Repository on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Git Project 2: Linux_Dashbord -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge github">Fleet Monitoring &amp; Bash</span>
+            <a href="https://github.com/aishwar2/Linux_Dashbord" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
+              <span>github.com/aishwar2/Linux_Dashbord</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-title">Multi-Node Linux Dashboard (Node.js &amp; Automated Bash Probes)</h3>
+          <p class="project-desc">
+            Distributed Linux server monitoring system designed for high node counts. Employs lightweight, non-intrusive automated Bash probe scripts (<code>collect.sh</code>) to sample system health and stream metrics into an event-driven Node.js dashboard with structured CSV time-series logging.
+          </p>
+          <div class="project-metrics-box">
+            <div class="project-metric-item">
+              <span class="project-metric-name">Collector Engine:</span>
+              <span class="project-metric-val">Automated Bash Probes (collect.sh)</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Backend Runtime:</span>
+              <span class="project-metric-val">Node.js Event Aggregator</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Data Persistence:</span>
+              <span class="project-metric-val">Structured CSV Time-Series spooling</span>
+            </div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-pill">Bash</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Cron</span>
+            <span class="tech-pill">CSV Storage</span>
+            <span class="tech-pill">Fleet KPIs</span>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://github.com/aishwar2/Linux_Dashbord" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>View Repository on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Git Project 3: rocky_linux9.8 -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge github">Enterprise Linux &amp; Toolchain</span>
+            <a href="https://github.com/aishwar2/rocky_linux9.8" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
+              <span>github.com/aishwar2/rocky_linux9.8</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-title">Rocky Linux 9.8 Custom Enterprise Live ISO Builder</h3>
+          <p class="project-desc">
+            Automated Bash pipeline (<code>build_live_iso.sh</code>) to generate standalone bootable enterprise Linux images. Decouples proprietary Red Hat subscription registration from RHEL ISOs and configures clean Rocky Linux upstream repositories for isolated testbed staging, DR recovery testing, and fleet verification.
+          </p>
+          <div class="project-metrics-box">
+            <div class="project-metric-item">
+              <span class="project-metric-name">Automation Script:</span>
+              <span class="project-metric-val">build_live_iso.sh toolchain</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">OS Base:</span>
+              <span class="project-metric-val">RHEL 9.8 / Rocky Linux 9.8</span>
+            </div>
+            <div class="project-metric-item">
+              <span class="project-metric-name">Use Case:</span>
+              <span class="project-metric-val">DR Validation &amp; Isolated Lab Staging</span>
+            </div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-pill">Bash Pipeline</span>
+            <span class="tech-pill">RHEL 9.8</span>
+            <span class="tech-pill">Rocky Linux</span>
+            <span class="tech-pill">Live ISO</span>
+            <span class="tech-pill">LVM / Storage</span>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://github.com/aishwar2/rocky_linux9.8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>View Repository on GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
