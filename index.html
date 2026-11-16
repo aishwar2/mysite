@@ -6,17 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <!-- Primary Meta Tags -->
-  <title>Aishwar Yadav | Application Support Engineer – Linux & MySQL</title>
-  <meta name="title" content="Aishwar Yadav | Application Support Engineer – Linux & MySQL" />
-  <meta name="description" content="Application Support Engineer with 6+ years of experience supporting mission-critical enterprise platforms on high-availability Linux servers (250+ nodes) and production MySQL databases. Specialized in low-latency tuning, RHEL upgrades, and database replication." />
-  <meta name="keywords" content="Aishwar Yadav, Application Support Engineer, Linux Administrator, MySQL DBA, Production Support, High Availability, RHEL, Onload, Ansible, Nagios, AWS" />
+  <title>Aishwar Yadav | Application Support Engineer – Linux &amp; MySQL</title>
+  <meta name="title" content="Aishwar Yadav | Application Support Engineer – Linux &amp; MySQL" />
+  <meta name="description" content="Application Support Engineer with 6+ years supporting mission-critical enterprise platforms on 250+ Linux nodes and production MySQL fleets. Specialized in low-latency tuning, RHEL upgrades, database replication, and automation." />
+  <meta name="keywords" content="Application Support Engineer, Linux Administrator, MySQL DBA, Production Support Engineer, RHEL Administrator, Ansible Engineer, AWS Engineer, Infrastructure Engineer, Solarflare Onload, Disaster Recovery, High Availability, Shell Scripting" />
   <meta name="author" content="Aishwar Yadav" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://aishwar2.github.io/mysite/" />
-  <meta property="og:title" content="Aishwar Yadav | Application Support Engineer – Linux & MySQL" />
-  <meta property="og:description" content="6+ years supporting mission-critical financial trading systems, 250+ RHEL servers, low-latency kernel tuning, and production MySQL fleets." />
+  <meta property="og:title" content="Aishwar Yadav | Application Support Engineer – Linux &amp; MySQL" />
+  <meta property="og:description" content="Supporting mission-critical enterprise infrastructure, automation, and database environments with 6+ years of production support experience." />
+  <meta property="og:image" content="https://aishwar2.github.io/mysite/assets/favicon.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://aishwar2.github.io/mysite/" />
+  <meta property="twitter:title" content="Aishwar Yadav | Application Support Engineer – Linux &amp; MySQL" />
+  <meta property="twitter:description" content="Supporting mission-critical enterprise infrastructure, automation, and database environments with 6+ years of production support experience." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -28,11 +37,51 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Structured Data (JSON-LD) for ATS & Recruiter SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aishwar Yadav",
+    "jobTitle": "Application Support Engineer",
+    "url": "https://aishwar2.github.io/mysite/",
+    "sameAs": [
+      "https://github.com/aishwar2",
+      "https://linkedin.com/in/aishwar-yadav"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thane",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "India"
+    },
+    "knowsAbout": [
+      "Application Support Engineer",
+      "Linux Administrator",
+      "MySQL DBA",
+      "Production Support Engineer",
+      "RHEL Administrator",
+      "Ansible Engineer",
+      "AWS Engineer",
+      "Infrastructure Engineer",
+      "High Availability",
+      "Disaster Recovery",
+      "Solarflare Onload",
+      "GTID Replication",
+      "Percona XtraBackup"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Mumbai"
+    }
+  }
+  </script>
 </head>
 <body>
 
   <!-- =========================================================================
-       NAVIGATION BAR
+       STICKY NAVIGATION BAR
        ========================================================================= -->
   <header class="navbar">
     <div class="container nav-container">
@@ -46,10 +95,14 @@
 
       <nav class="nav-links" id="nav-links">
         <a href="#hero" class="nav-link active">About</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#tech-stack" class="nav-link">Tech Stack</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
         <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
         <a href="#education" class="nav-link">Education</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Highlights &amp; Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-primary btn-sm mobile-only-resume">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -94,7 +147,7 @@
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="hero-grid">
-        <!-- Hero Left / Bio -->
+        <!-- Hero Bio & CTAs -->
         <div class="hero-content">
           <div class="hero-profile-badge">
             <div class="avatar-ring">
@@ -107,16 +160,60 @@
           </div>
 
           <h1 class="hero-title">
-            Hi, I'm <span class="hero-highlight">Aishwar Yadav</span>
+            <span class="hero-highlight">Aishwar Yadav</span>
           </h1>
 
-          <div class="hero-subtitle">
-            <span>[</span> Application Support Engineer – Linux &amp; MySQL <span>]</span>
+          <div class="hero-headline">
+            Application Support Engineer | Linux | MySQL | Automation | High Availability
           </div>
 
-          <p class="hero-description">
-            Results-oriented engineer with <strong>over 6 years of experience</strong> supporting mission-critical enterprise platforms on high-availability Linux servers (fleet of 250+ nodes) and production MySQL database fleets. Specialized in rapid L2/L3 incident resolution, root-cause analysis (RCA), low-latency kernel tuning for financial trading feeds, and large-scale zero-downtime upgrades.
+          <p class="hero-subheadline">
+            Supporting mission-critical enterprise infrastructure, automation, and database environments with 6+ years of production support experience.
           </p>
+
+          <div class="hero-ctas-wrap">
+            <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-primary" title="Download Official Resume PDF">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+
+            <a href="#projects" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>View Projects</span>
+            </a>
+
+            <a href="https://github.com/aishwar2" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://linkedin.com/in/aishwar-yadav" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="#contact" class="btn btn-accent">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Contact Me</span>
+            </a>
+          </div>
 
           <div class="hero-meta-badges">
             <div class="meta-badge">
@@ -133,7 +230,7 @@
                 <line x1="6" y1="6" x2="6.01" y2="6"></line>
                 <line x1="6" y1="18" x2="6.01" y2="18"></line>
               </svg>
-              <span>250+ RHEL Fleet Managed</span>
+              <span>250+ Enterprise RHEL Nodes</span>
             </div>
             <div class="meta-badge">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -142,51 +239,9 @@
               <span>99.99% Production SLAs</span>
             </div>
           </div>
-
-          <div class="hero-ctas">
-            <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              <span>Download Resume</span>
-            </a>
-
-            <a href="#contact" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <span>Get In Touch</span>
-            </a>
-
-            <div class="social-links">
-              <a href="https://linkedin.com/in/aishwar-yadav" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </a>
-
-              <a href="https://github.com/aishwar2" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile" aria-label="GitHub">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-
-              <a href="mailto:aishwar253@outlook.com" class="social-link" title="Email Aishwar" aria-label="Email">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </a>
-            </div>
-          </div>
         </div>
 
-        <!-- Hero Right / Interactive Sysadmin Terminal -->
+        <!-- Hero Terminal Simulation -->
         <div class="hero-terminal">
           <div class="terminal-card">
             <div class="terminal-header">
@@ -214,11 +269,11 @@
 
               <div class="terminal-line">
                 <span class="terminal-prompt">aishwar@prod-fleet-01:~$</span> <span class="terminal-cmd">cat /etc/profile.d/intro.sh</span>
-                <div class="terminal-output">"Specialized in low-latency Linux kernel tuning (Solarflare Onload), high-volume MySQL replication & zero-downtime OS migrations."</div>
+                <div class="terminal-output">"Specialized in low-latency Linux kernel tuning (Solarflare Onload), high-volume MySQL replication &amp; zero-downtime OS migrations."</div>
               </div>
 
               <div class="terminal-line">
-                <span class="terminal-prompt">aishwar@prod-fleet-01:~$</span> <span class="terminal-cmd"># Click quick commands below to inspect:</span>
+                <span class="terminal-prompt">aishwar@prod-fleet-01:~$</span> <span class="terminal-cmd"># Click quick command chips below to inspect fleet:</span>
               </div>
             </div>
 
@@ -239,216 +294,988 @@
   </section>
 
   <!-- =========================================================================
-       KEY STATS & IMPACT METRICS
+       KEY ACHIEVEMENTS SECTION (Immediately below Hero)
        ========================================================================= -->
-  <section class="stats-section">
+  <section class="section section-alt" id="achievements">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon-box blue">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
+      <div class="section-header">
+        <span class="section-tag">Production Track Record</span>
+        <h2 class="section-title">Key Achievements</h2>
+        <p class="section-subtitle">
+          Proven operational milestones and reliability metrics delivered across high-concurrency enterprise trading and mission-critical systems.
+        </p>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- Card 1 -->
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon-circle">
+              🏆
+            </div>
+            <span class="achievement-badge production">Fleet Scale</span>
           </div>
-          <div class="stat-number" data-target="6" data-suffix="+">0+</div>
-          <div class="stat-title">Years Experience</div>
-          <div class="stat-desc">Enterprise Application &amp; Infrastructure Support (L2/L3)</div>
+          <h3 class="achievement-title">Supported 250+ Enterprise Linux Servers</h3>
+          <p class="achievement-desc">
+            Maintained continuous high-availability operations across 250+ RHEL bare-metal, Nutanix, and VMware virtualized clusters with zero unplanned outages.
+          </p>
         </div>
 
-        <div class="stat-card">
-          <div class="stat-icon-box green">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-              <line x1="6" y1="6" x2="6.01" y2="6"></line>
-              <line x1="6" y1="18" x2="6.01" y2="18"></line>
-            </svg>
+        <!-- Card 2 -->
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon-circle">
+              🏆
+            </div>
+            <span class="achievement-badge database">High Availability</span>
           </div>
-          <div class="stat-number" data-target="250" data-suffix="+">0+</div>
-          <div class="stat-title">RHEL Linux Nodes</div>
-          <div class="stat-desc">Bare-metal, Nutanix &amp; VMware virtualized infrastructure</div>
+          <h3 class="achievement-title">Managed 25+ Production Databases</h3>
+          <p class="achievement-desc">
+            Administered mission-critical MySQL 8/9 source-replica topologies, resolved GTID synchronization drift, and guaranteed 100% data integrity with Percona XtraBackup.
+          </p>
         </div>
 
-        <div class="stat-card">
-          <div class="stat-icon-box purple">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-            </svg>
+        <!-- Card 3 -->
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon-circle">
+              🏆
+            </div>
+            <span class="achievement-badge recovery">Disaster Recovery</span>
           </div>
-          <div class="stat-number" data-target="25" data-suffix="+">0+</div>
-          <div class="stat-title">Production MySQL DBs</div>
-          <div class="stat-desc">Source-replica topologies, GTID sync &amp; PITR restoration</div>
+          <h3 class="achievement-title">Executed DC-DR Failover in 45 Minutes</h3>
+          <p class="achievement-desc">
+            Validated and orchestrated a 45-minute Data Center to Disaster Recovery site failover benchmark for financial trading platforms under strict regulatory SLAs.
+          </p>
         </div>
 
-        <div class="stat-card">
-          <div class="stat-icon-box amber">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
+        <!-- Card 4 -->
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon-circle">
+              🏆
+            </div>
+            <span class="achievement-badge upgrade">Zero Downtime</span>
           </div>
-          <div class="stat-number" data-target="45" data-suffix=" min">0 min</div>
-          <div class="stat-title">DC-to-DR Failover</div>
-          <div class="stat-desc">Validated disaster recovery benchmark under strict SLAs</div>
+          <h3 class="achievement-title">Delivered Zero-Downtime Upgrades</h3>
+          <p class="achievement-desc">
+            Executed large-scale in-place OS upgrades from RHEL 7.9 to 8.10 via the Leapp utility and Satellite, validating application binary libraries with zero service interruption.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon-circle">
+              🏆
+            </div>
+            <span class="achievement-badge automation">Automation</span>
+          </div>
+          <h3 class="achievement-title">Automated Repetitive Operations (Shell &amp; Ansible)</h3>
+          <p class="achievement-desc">
+            Automated daily health checks, patch cycles, and disk capacity alerts using Bash shell scripts and Ansible Vault, slashing manual operational toil by 60%.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon-circle">
+              🏆
+            </div>
+            <span class="achievement-badge sla">Reliability</span>
+          </div>
+          <h3 class="achievement-title">Maintained High SLA Compliance Across Critical Systems</h3>
+          <p class="achievement-desc">
+            Consistently exceeded 99.99% SLA targets for ultra-low latency multicast market data feeds and high-frequency order routing systems.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       1. WORK EXPERIENCE TIMELINE
+       TECH STACK SECTION (Scrolling Marquee + Categorized Badges)
        ========================================================================= -->
-  <section class="section section-alt" id="experience">
+  <section class="section" id="tech-stack">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Career Journey</span>
+        <span class="section-tag">Core Technical Toolkit</span>
+        <h2 class="section-title">Technology Stack &amp; Competencies</h2>
+        <p class="section-subtitle">
+          Specialized infrastructure, database, and automation toolchains battle-tested for enterprise reliability.
+        </p>
+      </div>
+    </div>
+
+    <!-- Infinite Scrolling Marquee Banner -->
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <div class="marquee-item"><span class="marquee-item-icon">🐧</span> RHEL 7 / 8 / 9</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🗄️</span> MySQL 8.4 / 9.7</div>
+        <div class="marquee-item"><span class="marquee-item-icon">⚙️</span> Ansible &amp; Vault</div>
+        <div class="marquee-item"><span class="marquee-item-icon">💻</span> Bash Shell Scripting</div>
+        <div class="marquee-item"><span class="marquee-item-icon">⚡</span> Solarflare Onload (Kernel Bypass)</div>
+        <div class="marquee-item"><span class="marquee-item-icon">📦</span> Docker &amp; Containers</div>
+        <div class="marquee-item"><span class="marquee-item-icon">☸️</span> Kubernetes (CKA Track)</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🌐</span> Nginx Reverse Proxy</div>
+        <div class="marquee-item"><span class="marquee-item-icon">☁️</span> AWS (EC2, S3, IAM, SSM)</div>
+        <div class="marquee-item"><span class="marquee-item-icon">📊</span> Nagios XI &amp; Core</div>
+        <div class="marquee-item"><span class="marquee-item-icon">📈</span> Grafana &amp; Prometheus</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🪨</span> Rocky Linux 9.8</div>
+        <div class="marquee-item"><span class="marquee-item-icon">💾</span> Percona XtraBackup</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🐙</span> Git &amp; GitHub Actions</div>
+        <!-- Duplicated items for continuous seamless loop -->
+        <div class="marquee-item"><span class="marquee-item-icon">🐧</span> RHEL 7 / 8 / 9</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🗄️</span> MySQL 8.4 / 9.7</div>
+        <div class="marquee-item"><span class="marquee-item-icon">⚙️</span> Ansible &amp; Vault</div>
+        <div class="marquee-item"><span class="marquee-item-icon">💻</span> Bash Shell Scripting</div>
+        <div class="marquee-item"><span class="marquee-item-icon">⚡</span> Solarflare Onload (Kernel Bypass)</div>
+        <div class="marquee-item"><span class="marquee-item-icon">📦</span> Docker &amp; Containers</div>
+        <div class="marquee-item"><span class="marquee-item-icon">☸️</span> Kubernetes (CKA Track)</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🌐</span> Nginx Reverse Proxy</div>
+        <div class="marquee-item"><span class="marquee-item-icon">☁️</span> AWS (EC2, S3, IAM, SSM)</div>
+        <div class="marquee-item"><span class="marquee-item-icon">📊</span> Nagios XI &amp; Core</div>
+        <div class="marquee-item"><span class="marquee-item-icon">📈</span> Grafana &amp; Prometheus</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🪨</span> Rocky Linux 9.8</div>
+        <div class="marquee-item"><span class="marquee-item-icon">💾</span> Percona XtraBackup</div>
+        <div class="marquee-item"><span class="marquee-item-icon">🐙</span> Git &amp; GitHub Actions</div>
+      </div>
+    </div>
+
+    <!-- Categorized Tech Stack Grid -->
+    <div class="container">
+      <div class="tech-categories-grid">
+        <!-- 1. Operating Systems -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Operating Systems</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">RHEL (7, 8, 9)</span>
+            <span class="tech-badge featured">Rocky Linux</span>
+            <span class="tech-badge">CentOS</span>
+            <span class="tech-badge">Ubuntu Server</span>
+            <span class="tech-badge">Leapp Upgrades</span>
+            <span class="tech-badge">Red Hat Satellite</span>
+            <span class="tech-badge featured">sysctl Kernel Tuning</span>
+          </div>
+        </div>
+
+        <!-- 2. Databases -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Databases</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">MySQL 8.4 / 9.7</span>
+            <span class="tech-badge">MariaDB</span>
+            <span class="tech-badge featured">GTID Replication</span>
+            <span class="tech-badge featured">Percona XtraBackup</span>
+            <span class="tech-badge">EXPLAIN PLAN</span>
+            <span class="tech-badge">Index Optimization</span>
+            <span class="tech-badge">Point-in-Time Recovery</span>
+          </div>
+        </div>
+
+        <!-- 3. Automation -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Automation &amp; Scripting</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">Ansible Playbooks</span>
+            <span class="tech-badge featured">Shell Scripting (Bash)</span>
+            <span class="tech-badge">Ansible Vault</span>
+            <span class="tech-badge">Cron Job Automation</span>
+            <span class="tech-badge">LVM Disk Expand</span>
+            <span class="tech-badge">Logrotate Policies</span>
+            <span class="tech-badge">Patch Automation</span>
+          </div>
+        </div>
+
+        <!-- 4. Web -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Web &amp; Application</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">Nginx Reverse Proxy</span>
+            <span class="tech-badge">Apache HTTP Server</span>
+            <span class="tech-badge">Apache Tomcat</span>
+            <span class="tech-badge">SSL / TLS Termination</span>
+            <span class="tech-badge">HTTP Load Balancing</span>
+            <span class="tech-badge">Postfix MTA</span>
+          </div>
+        </div>
+
+        <!-- 5. Cloud -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Cloud Infrastructure</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">AWS EC2</span>
+            <span class="tech-badge">AWS S3</span>
+            <span class="tech-badge">AWS IAM</span>
+            <span class="tech-badge">AWS VPC</span>
+            <span class="tech-badge">AWS CloudWatch</span>
+            <span class="tech-badge featured">AWS Systems Manager</span>
+            <span class="tech-badge">VMware vSphere</span>
+            <span class="tech-badge">Nutanix AHV</span>
+          </div>
+        </div>
+
+        <!-- 6. Containers -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Containers</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">Docker</span>
+            <span class="tech-badge">Docker Compose</span>
+            <span class="tech-badge featured">Kubernetes (CKA Track)</span>
+            <span class="tech-badge">Container Telemetry</span>
+            <span class="tech-badge">Microservice Isolation</span>
+          </div>
+        </div>
+
+        <!-- 7. Monitoring -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Monitoring &amp; Observability</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">Nagios Core &amp; XI</span>
+            <span class="tech-badge featured">Grafana</span>
+            <span class="tech-badge">Prometheus</span>
+            <span class="tech-badge">systemd &amp; journalctl</span>
+            <span class="tech-badge">Custom Bash Plugins</span>
+            <span class="tech-badge featured">Root Cause Analysis (RCA)</span>
+          </div>
+        </div>
+
+        <!-- 8. Version Control -->
+        <div class="tech-cat-card">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="6" y1="3" x2="6" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
+              </svg>
+            </div>
+            <h3 class="tech-cat-title">Version Control &amp; CI</h3>
+          </div>
+          <div class="tech-badges-wrap">
+            <span class="tech-badge featured">Git</span>
+            <span class="tech-badge featured">GitHub</span>
+            <span class="tech-badge">Bitbucket</span>
+            <span class="tech-badge">GitHub Actions</span>
+            <span class="tech-badge">Automated Deployments</span>
+            <span class="tech-badge">Infrastructure as Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VISUAL ARCHITECTURE DIAGRAMS SECTION
+       ========================================================================= -->
+  <section class="section section-alt" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Systems Blueprint</span>
+        <h2 class="section-title">Visual Systems Architecture</h2>
+        <p class="section-subtitle">
+          Engineered architectural patterns for enterprise database replication and sub-millisecond financial market data feeds.
+        </p>
+      </div>
+
+      <div class="diagrams-grid">
+        <!-- Diagram 1: MySQL High Availability & GTID Replication -->
+        <div class="diagram-card">
+          <div class="diagram-header">
+            <div class="diagram-title-box">
+              <h3>1. Production MySQL GTID Replication &amp; High Availability Topology</h3>
+              <p>Source-replica architecture with zero data loss, binlog synchronization, and verified Point-in-Time Recovery.</p>
+            </div>
+            <span class="diagram-badge">Database Reliability</span>
+          </div>
+
+          <div class="svg-diagram-wrapper">
+            <svg class="svg-diagram" viewBox="0 0 920 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Background Grid / Bounds -->
+              <rect width="920" height="280" rx="12" fill="#0f172a"/>
+              
+              <!-- App Tier Box -->
+              <rect x="40" y="70" width="180" height="140" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+              <text x="130" y="110" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Enterprise Apps</text>
+              <text x="130" y="135" fill="#94a3b8" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">Trading &amp; Web Services</text>
+              <rect x="65" y="155" width="130" height="28" rx="6" fill="#0369a1"/>
+              <text x="130" y="174" fill="#ffffff" font-size="11" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">Read / Write Split</text>
+
+              <!-- Connection Arrow 1: App to Primary -->
+              <path d="M220 125 L340 125" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
+              <polygon points="345,125 335,120 335,130" fill="#38bdf8"/>
+              <text x="282" y="115" fill="#38bdf8" font-size="11" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">Writes (InnoDB)</text>
+
+              <!-- Primary MySQL Node -->
+              <rect x="350" y="55" width="220" height="170" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+              <rect x="370" y="70" width="180" height="28" rx="6" fill="#065f46"/>
+              <text x="460" y="89" fill="#a7f3d0" font-size="12" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">PRIMARY MYSQL (8.4/9.7)</text>
+              <text x="460" y="125" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">Binary Logging Enabled</text>
+              <text x="460" y="148" fill="#94a3b8" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">GTID: 3E11FA47-71A2...</text>
+              <rect x="385" y="165" width="150" height="34" rx="6" fill="#0f172a" stroke="#334155"/>
+              <text x="460" y="186" fill="#22c55e" font-size="11" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">● IO Thread: Active</text>
+
+              <!-- Connection Arrow 2: GTID Replication Stream -->
+              <path d="M570 125 L680 125" stroke="#22c55e" stroke-width="3"/>
+              <polygon points="685,125 675,119 675,131" fill="#22c55e"/>
+              <text x="625" y="105" fill="#22c55e" font-size="11" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">GTID SYNC</text>
+              <text x="625" y="145" fill="#94a3b8" font-size="10" text-anchor="middle" font-family="JetBrains Mono, monospace">Lag: 0.00s</text>
+
+              <!-- Replica MySQL Node -->
+              <rect x="690" y="55" width="200" height="170" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+              <rect x="705" y="70" width="170" height="28" rx="6" fill="#3730a3"/>
+              <text x="790" y="89" fill="#c7d2fe" font-size="12" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">REPLICA (READ-ONLY)</text>
+              <text x="790" y="125" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">Relay Log &amp; SQL Thread</text>
+              <text x="790" y="148" fill="#94a3b8" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">Query Offloading</text>
+              <rect x="715" y="165" width="150" height="34" rx="6" fill="#0f172a" stroke="#334155"/>
+              <text x="790" y="186" fill="#38bdf8" font-size="11" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">Percona XtraBackup PITR</text>
+
+              <!-- App direct read connection to Replica -->
+              <path d="M130 210 L130 250 L790 250 L790 225" stroke="#818cf8" stroke-width="1.8" stroke-dasharray="5 3"/>
+              <text x="460" y="244" fill="#a5b4fc" font-size="10" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">Analytical Read Queries Offloaded to Replica (Zero Impact on Writes)</text>
+            </svg>
+          </div>
+
+          <div class="diagram-key-takeaways">
+            <div class="takeaway-item">
+              <span class="takeaway-check">✓</span>
+              <span><strong>GTID Zero Data Loss:</strong> Global Transaction Identifiers guarantee exact binlog synchronization and automated failover recovery.</span>
+            </div>
+            <div class="takeaway-item">
+              <span class="takeaway-check">✓</span>
+              <span><strong>High Availability Reads:</strong> Read-heavy analytical and reporting queries are isolated onto replica nodes with zero replication lag.</span>
+            </div>
+            <div class="takeaway-item">
+              <span class="takeaway-check">✓</span>
+              <span><strong>Verified PITR Restores:</strong> Percona XtraBackup physical and logical backup pipelines with routine point-in-time test recoveries.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diagram 2: Low-Latency Financial Trading Environment -->
+        <div class="diagram-card">
+          <div class="diagram-header">
+            <div class="diagram-title-box">
+              <h3>2. Ultra-Low Latency Trading Infrastructure (Solarflare Kernel Bypass)</h3>
+              <p>Hardware ring-buffer optimization, CPU core isolation, and user-space packet delivery for multicast market feeds.</p>
+            </div>
+            <span class="diagram-badge">Low Latency Tuning</span>
+          </div>
+
+          <div class="svg-diagram-wrapper">
+            <svg class="svg-diagram" viewBox="0 0 920 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="920" height="280" rx="12" fill="#0f172a"/>
+
+              <!-- Multicast Market Feed -->
+              <rect x="40" y="70" width="170" height="140" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+              <text x="125" y="110" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Market Feed</text>
+              <text x="125" y="135" fill="#fcd34d" font-size="12" text-anchor="middle" font-family="JetBrains Mono, monospace">Multicast UDP</text>
+              <rect x="55" y="155" width="140" height="28" rx="6" fill="#78350f"/>
+              <text x="125" y="174" fill="#ffffff" font-size="11" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">High-Volume Ticks</text>
+
+              <!-- Connection Arrow 1: Feed to NIC -->
+              <path d="M210 140 L310 140" stroke="#f59e0b" stroke-width="2.5"/>
+              <polygon points="315,140 305,135 305,145" fill="#f59e0b"/>
+              <text x="260" y="130" fill="#f59e0b" font-size="10" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">10/25GbE</text>
+
+              <!-- Solarflare NIC -->
+              <rect x="320" y="60" width="180" height="160" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+              <text x="410" y="95" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Solarflare NIC</text>
+              <text x="410" y="120" fill="#94a3b8" font-size="11" text-anchor="middle" font-family="JetBrains Mono, monospace">SFP+ Dual Port</text>
+              <rect x="335" y="140" width="150" height="30" rx="6" fill="#0369a1"/>
+              <text x="410" y="160" fill="#ffffff" font-size="11" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">Ring Buffer: 4096</text>
+              <text x="410" y="195" fill="#22c55e" font-size="10" font-weight="600" text-anchor="middle" font-family="JetBrains Mono, monospace">0% Dropped Packets</text>
+
+              <!-- Connection Arrow 2: Kernel Bypass -->
+              <path d="M500 115 L620 115" stroke="#22c55e" stroke-width="3"/>
+              <polygon points="625,115 615,109 615,121" fill="#22c55e"/>
+              <text x="560" y="105" fill="#22c55e" font-size="11" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">ONLOAD BYPASS</text>
+
+              <!-- Standard Kernel Stack (Bypassed) -->
+              <path d="M500 165 L620 165" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <text x="560" y="180" fill="#f87171" font-size="10" text-anchor="middle" font-family="JetBrains Mono, monospace">Standard OS Kernel (Bypassed)</text>
+
+              <!-- Low-Latency Execution Application -->
+              <rect x="630" y="55" width="250" height="170" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+              <rect x="645" y="70" width="220" height="28" rx="6" fill="#065f46"/>
+              <text x="755" y="89" fill="#a7f3d0" font-size="12" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">TRADING APPLICATION</text>
+              <text x="755" y="125" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">Direct User-Space Delivery</text>
+              <text x="755" y="148" fill="#38bdf8" font-size="11" text-anchor="middle" font-family="JetBrains Mono, monospace">Pinned Cores: isolcpus=2-15</text>
+              <rect x="655" y="165" width="200" height="34" rx="6" fill="#0f172a" stroke="#334155"/>
+              <text x="755" y="186" fill="#22c55e" font-size="11" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">Latency: Sub-Microsecond</text>
+
+              <!-- Bottom Annotation -->
+              <rect x="250" y="235" width="420" height="28" rx="6" fill="#1e293b" stroke="#334155"/>
+              <text x="460" y="253" fill="#cbd5e1" font-size="11" font-weight="500" text-anchor="middle" font-family="Inter, sans-serif">Eliminates OS Context Switches &amp; Interrupt Handling Latency</text>
+            </svg>
+          </div>
+
+          <div class="diagram-key-takeaways">
+            <div class="takeaway-item">
+              <span class="takeaway-check">✓</span>
+              <span><strong>Kernel Bypass Architecture:</strong> Solarflare Onload moves network packet delivery directly into user space, slashing latency spikes.</span>
+            </div>
+            <div class="takeaway-item">
+              <span class="takeaway-check">✓</span>
+              <span><strong>Hardware Ring Optimization:</strong> RX and TX ring buffers maximized to 4096 entries to eliminate packet loss during market openings.</span>
+            </div>
+            <div class="takeaway-item">
+              <span class="takeaway-check">✓</span>
+              <span><strong>CPU &amp; NUMA Pinning:</strong> Applications pinned directly to dedicated NUMA node memory and isolated cores to prevent CPU scheduling jitter.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       EXPERIENCE SECTION (Recruiter & ATS Optimized)
+       ========================================================================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career History</span>
         <h2 class="section-title">Professional Experience</h2>
         <p class="section-subtitle">
           Over 6 years of sustained operational excellence supporting high-concurrency enterprise and financial systems.
         </p>
       </div>
 
-      <div class="timeline">
+      <div class="experience-list">
         <!-- Role 1: Intellicsglobal -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <h3 class="timeline-role">Linux &amp; Application Support Administrator</h3>
-              <span class="timeline-period">Feb 2024 – Present</span>
+        <div class="experience-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role-title">Linux &amp; Application Support Administrator</h3>
+              <div class="exp-company-bar">
+                <span>Intellicsglobal</span>
+                <span>•</span>
+                <span>Financial Trading Platforms Fleet</span>
+                <span>•</span>
+                <span>Thane, India</span>
+              </div>
             </div>
-            <div class="timeline-company">
-              <span>Intellicsglobal</span>
+            <span class="exp-badge-duration">Feb 2024 – Present</span>
+          </div>
+
+          <!-- Quick Metrics Grid -->
+          <div class="exp-metrics-grid">
+            <div class="exp-metric-box">
+              <div class="exp-metric-val">250+</div>
+              <div class="exp-metric-lbl">Enterprise RHEL Nodes</div>
             </div>
-            <div class="timeline-domain">
-              High-Availability Financial Trading Platforms &amp; Distributed Linux Fleet
+            <div class="exp-metric-box">
+              <div class="exp-metric-val">45 Min</div>
+              <div class="exp-metric-lbl">DC-DR Failover SLA</div>
             </div>
-            <ul class="timeline-highlights">
+            <div class="exp-metric-box">
+              <div class="exp-metric-val">60%</div>
+              <div class="exp-metric-lbl">Manual Toil Slashing</div>
+            </div>
+          </div>
+
+          <!-- Key Responsibilities -->
+          <div class="exp-section-label">Key Responsibilities</div>
+          <ul class="exp-bullets-list">
+            <li>
+              Provide Tier-2 / Tier-3 24x7 production support across a critical fleet of <strong>250+ enterprise RHEL servers</strong> spanning bare-metal, Nutanix AHV, and VMware virtualized environments.
+            </li>
+            <li>
+              Configured <strong>Solarflare Onload</strong> network acceleration on enterprise RHEL servers to optimize throughput and packet handling for ultra-low latency financial trading platforms.
+            </li>
+            <li>
+              Tuned Linux kernel parameters (<code>sysctl</code>), isolated CPU core pinning (<code>isolcpus</code>), configured NUMA bindings, and maximized network ring buffers to eliminate jitter across high-throughput multicast market data feeds.
+            </li>
+            <li>
+              Planned and executed major in-place OS fleet upgrades from <strong>RHEL 7.9 to 8.10</strong> using the Leapp utility and Red Hat Satellite with <strong>zero unplanned downtime</strong>.
+            </li>
+          </ul>
+
+          <!-- Expandable Details -->
+          <div class="exp-collapsible" id="exp-details-1">
+            <div class="exp-section-label">Key Achievements &amp; Production Milestones</div>
+            <ul class="exp-bullets-list">
               <li>
-                Provide Tier-2/Tier-3 application and infrastructure support across a critical fleet of <strong>250+ RHEL servers</strong> spanning bare-metal, Nutanix, and VMware virtual environments.
+                Achieved and validated a <strong>45-minute Data Center (DC) to Disaster Recovery (DR) failover benchmark</strong> for mission-critical trading platforms under strict SLAs.
               </li>
               <li>
-                Configured <strong>Solarflare Onload</strong> on enterprise RHEL servers to optimize network latency, throughput, and packet handling for ultra-low latency high-frequency trading platforms.
-              </li>
-              <li>
-                Tuned Linux kernel parameters (<code>sysctl</code>), CPU core pinning, NUMA node bindings, and network ring buffers to eliminate jitter and dropped packets across high-throughput multicast market feeds.
-              </li>
-              <li>
-                Planned and executed major in-place OS upgrades from <strong>RHEL 7.9 to 8.10</strong> using the Leapp utility and Red Hat Satellite, thoroughly validating application library dependencies with zero service interruption.
+                Automated daily server health monitoring, log rotations, and critical disk threshold alerts using custom Bash shell scripts, <strong>reducing manual operational toil by 60%</strong>.
               </li>
               <li>
                 Collaborated directly with Red Hat Enterprise Support to troubleshoot kernel-level incidents, cluster availability states, and SAN/LVM storage bottlenecks.
               </li>
               <li>
-                Automated regular OS patch cycles, system configurations, and application deployments using Ansible playbooks, managing sensitive credentials securely with <strong>Ansible Vault</strong>.
+                Automated regular OS patch cycles, system baseline configurations, and application deployments using Ansible playbooks with encrypted credentials in <strong>Ansible Vault</strong>.
               </li>
               <li>
-                Automated daily server health monitoring, log rotations, and critical disk threshold alerts using custom Bash shell scripts, <strong>reducing manual operational tasks by 60%</strong>.
+                Administered filesystem expansions and volume groups using Logical Volume Manager (LVM) and fdisk, proactively preventing outages caused by capacity exhaustion.
               </li>
               <li>
-                Administered filesystem expansions and volume groups using Logical Volume Manager (LVM) and fdisk, proactively preventing service outages caused by capacity exhaustion.
-              </li>
-              <li>
-                Perform rapid incident triage and deep log investigation using <code>journalctl</code>, <code>grep</code>, <code>awk</code>, and Tomcat/Nginx application logs to diagnose errors, isolate root causes, and restore normal operations.
-              </li>
-              <li>
-                Achieved and validated a <strong>45-minute Data Center (DC) to Disaster Recovery (DR) failover benchmark</strong> for mission-critical trading platforms under strict SLAs.
+                Conducted rapid incident triage and deep log investigation using <code>journalctl</code>, <code>grep</code>, <code>awk</code>, and Tomcat/Nginx application logs to isolate root causes and restore operations.
               </li>
             </ul>
-            <div class="timeline-tags">
-              <span class="tech-pill">RHEL 7/8/9</span>
-              <span class="tech-pill">Onload</span>
-              <span class="tech-pill">Kernel sysctl</span>
-              <span class="tech-pill">NUMA</span>
-              <span class="tech-pill">Ansible Vault</span>
-              <span class="tech-pill">Leapp</span>
-              <span class="tech-pill">Satellite</span>
-              <span class="tech-pill">LVM</span>
-              <span class="tech-pill">Nginx/Tomcat</span>
-              <span class="tech-pill">DR Failover</span>
-            </div>
+          </div>
+
+          <button class="expand-btn" data-target="exp-details-1">
+            <span>Show Full Details</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          <!-- Technologies Used -->
+          <div class="exp-tech-stack-wrap">
+            <span class="tech-pill">RHEL 7/8/9</span>
+            <span class="tech-pill">Solarflare Onload</span>
+            <span class="tech-pill">Kernel sysctl</span>
+            <span class="tech-pill">Leapp Utility</span>
+            <span class="tech-pill">Red Hat Satellite</span>
+            <span class="tech-pill">Ansible Vault</span>
+            <span class="tech-pill">Bash Scripting</span>
+            <span class="tech-pill">Nginx / Tomcat</span>
+            <span class="tech-pill">LVM Storage</span>
+            <span class="tech-pill">DC-DR Failover</span>
           </div>
         </div>
 
         <!-- Role 2: Quess IT Staffing -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <h3 class="timeline-role">Associate Engineer (Application &amp; Database Support)</h3>
-              <span class="timeline-period">Mar 2021 – Dec 2023</span>
+        <div class="experience-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role-title">Associate Engineer (Application &amp; Database Support)</h3>
+              <div class="exp-company-bar">
+                <span>Quess IT Staffing</span>
+                <span>•</span>
+                <span>Production Database &amp; Linux Operations</span>
+                <span>•</span>
+                <span>Mumbai / Thane, India</span>
+              </div>
             </div>
-            <div class="timeline-company">
-              <span>Quess IT Staffing</span>
+            <span class="exp-badge-duration">Mar 2021 – Dec 2023</span>
+          </div>
+
+          <!-- Quick Metrics Grid -->
+          <div class="exp-metrics-grid">
+            <div class="exp-metric-box">
+              <div class="exp-metric-val">25+</div>
+              <div class="exp-metric-lbl">MySQL Production DBs</div>
             </div>
-            <div class="timeline-domain">
-              Production MySQL Support, Query Optimization &amp; System Administration
+            <div class="exp-metric-box">
+              <div class="exp-metric-val">0%</div>
+              <div class="exp-metric-lbl">Data Loss in Upgrades</div>
             </div>
-            <ul class="timeline-highlights">
-              <li>
-                Supported and maintained <strong>25+ production MySQL databases and 250+ Linux nodes</strong>, ensuring continuous database connectivity, transaction integrity, and high performance.
-              </li>
-              <li>
-                Spearheaded production MySQL upgrades from version <strong>8.4 to 9.7</strong>, conducting pre-upgrade compatibility tests, automated backups, and schema validations with <strong>zero data loss</strong>.
-              </li>
-              <li>
-                Monitored and maintained MySQL source-replica replication topologies, promptly resolving replication lag, GTID discrepancies, and binlog synchronization issues.
-              </li>
-              <li>
-                Implemented automated physical and logical database backup procedures using <strong>Percona XtraBackup and mysqldump</strong>, conducting routine Point-in-Time Recovery (PITR) test restorations.
-              </li>
+            <div class="exp-metric-box">
+              <div class="exp-metric-val">99.9%</div>
+              <div class="exp-metric-lbl">Database Fleet Uptime</div>
+            </div>
+          </div>
+
+          <!-- Key Responsibilities -->
+          <div class="exp-section-label">Key Responsibilities</div>
+          <ul class="exp-bullets-list">
+            <li>
+              Supported and maintained <strong>25+ production MySQL databases and 250+ Linux nodes</strong>, ensuring continuous database connectivity, transaction integrity, and high performance.
+            </li>
+            <li>
+              Spearheaded production MySQL fleet upgrades from version <strong>8.4 to 9.7</strong>, conducting pre-upgrade schema validations, automated backups, and rollback points with <strong>zero data loss</strong>.
+            </li>
+            <li>
+              Monitored and maintained MySQL source-replica replication topologies, promptly resolving replication lag, GTID discrepancies, and binlog synchronization bottlenecks.
+            </li>
+            <li>
+              Implemented automated physical and logical database backup procedures using <strong>Percona XtraBackup and mysqldump</strong>, conducting routine Point-in-Time Recovery (PITR) test restorations.
+            </li>
+          </ul>
+
+          <!-- Expandable Details -->
+          <div class="exp-collapsible" id="exp-details-2">
+            <div class="exp-section-label">Key Achievements &amp; Production Milestones</div>
+            <ul class="exp-bullets-list">
               <li>
                 Investigated slow-running queries and bottlenecks using <strong>EXPLAIN PLAN</strong>, index tuning, and refactoring complex SQL multi-table joins, views, and stored procedures.
               </li>
               <li>
-                Authored ad-hoc SQL extraction scripts to retrieve high-volume transaction records across multiple tables and spool data into CSV extracts for business reporting.
-              </li>
-              <li>
                 Configured and maintained <strong>Nagios Core and Nagios XI</strong> monitoring platforms; authored custom Bash health-check plugins to proactively detect service degradation.
               </li>
+              <li>
+                Authored ad-hoc SQL extraction scripts to retrieve high-volume transaction records across multiple tables and spool data into CSV extracts for business reporting.
+              </li>
             </ul>
-            <div class="timeline-tags">
-              <span class="tech-pill">MySQL 8.4/9.7</span>
-              <span class="tech-pill">Percona XtraBackup</span>
-              <span class="tech-pill">GTID Replication</span>
-              <span class="tech-pill">EXPLAIN PLAN</span>
-              <span class="tech-pill">Index Tuning</span>
-              <span class="tech-pill">Nagios Core/XI</span>
-              <span class="tech-pill">Linux Systems</span>
-              <span class="tech-pill">PITR Recovery</span>
-            </div>
+          </div>
+
+          <button class="expand-btn" data-target="exp-details-2">
+            <span>Show Full Details</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          <!-- Technologies Used -->
+          <div class="exp-tech-stack-wrap">
+            <span class="tech-pill">MySQL 8.4 &amp; 9.7</span>
+            <span class="tech-pill">Percona XtraBackup</span>
+            <span class="tech-pill">GTID Replication</span>
+            <span class="tech-pill">EXPLAIN PLAN</span>
+            <span class="tech-pill">Index Tuning</span>
+            <span class="tech-pill">Nagios Core / XI</span>
+            <span class="tech-pill">Linux Systems</span>
+            <span class="tech-pill">PITR Recovery</span>
           </div>
         </div>
 
         <!-- Role 3: Impact Infotech -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <h3 class="timeline-role">Systems &amp; Technical Support Specialist</h3>
-              <span class="timeline-period">Nov 2019 – Dec 2020</span>
+        <div class="experience-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role-title">Systems &amp; Technical Support Specialist</h3>
+              <div class="exp-company-bar">
+                <span>Impact Infotech</span>
+                <span>•</span>
+                <span>Infrastructure &amp; Helpdesk Fleet</span>
+                <span>•</span>
+                <span>Thane, India</span>
+              </div>
             </div>
-            <div class="timeline-company">
-              <span>Impact Infotech</span>
+            <span class="exp-badge-duration">Nov 2019 – Dec 2020</span>
+          </div>
+
+          <div class="exp-section-label">Key Responsibilities &amp; Impact</div>
+          <ul class="exp-bullets-list">
+            <li>
+              Delivered prompt technical support and remote troubleshooting for distributed workforce systems, maintaining <strong>99%+ workstation availability</strong> across the organization.
+            </li>
+            <li>
+              Diagnosed network connectivity, hardware faults, operating system issues, and access permission errors with rapid turnaround times.
+            </li>
+          </ul>
+
+          <div class="exp-tech-stack-wrap">
+            <span class="tech-pill">Workstation Fleet</span>
+            <span class="tech-pill">Network Triage</span>
+            <span class="tech-pill">Hardware Diagnostics</span>
+            <span class="tech-pill">SLA Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PROJECTS SECTION (Modern Cards + Code & Demo Links)
+       ========================================================================= -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Code &amp; Architecture Showcase</span>
+        <h2 class="section-title">Featured Engineering Projects</h2>
+        <p class="section-subtitle">
+          Open-source infrastructure tools, telemetry agents, and automated Linux toolchains from GitHub.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Web System Telemetry -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge github">Telemetry &amp; Observability</span>
+            <span class="tech-pill">Dockerized</span>
+          </div>
+          <h3 class="project-title">Flask Web System Telemetry &amp; Linux Health Dashboard</h3>
+          <p class="project-desc">
+            A lightweight, real-time Linux infrastructure observability agent containerized with Docker. Captures kernel OS metrics, CPU core utilization, memory thresholds, and hardware thermal sensors.
+          </p>
+          <div class="project-tech-pills">
+            <span class="tech-pill">Python 3</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Linux Sensors</span>
+            <span class="tech-pill">REST API</span>
+          </div>
+          <ul class="project-features-list">
+            <li><span class="feature-check">✅</span> Real-time kernel OS metrics &amp; CPU core temperature tracking</li>
+            <li><span class="feature-check">✅</span> Lightweight zero-dependency containerized microservice</li>
+            <li><span class="feature-check">✅</span> Proactive memory threshold &amp; storage exhaustion alerts</li>
+          </ul>
+          <div class="project-actions">
+            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>View Code</span>
+            </a>
+            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring#readme" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Multi-Node Linux Dashboard -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge github">Fleet Monitoring &amp; Bash</span>
+            <span class="tech-pill">Multi-Node</span>
+          </div>
+          <h3 class="project-title">Multi-Node Linux Dashboard (Node.js &amp; Automated Bash Probes)</h3>
+          <p class="project-desc">
+            Distributed Linux server monitoring system designed for high node counts. Employs lightweight, non-intrusive automated Bash probe scripts (<code>collect.sh</code>) to stream metrics into an event-driven dashboard.
+          </p>
+          <div class="project-tech-pills">
+            <span class="tech-pill">Bash Probes</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Cron</span>
+            <span class="tech-pill">CSV Storage</span>
+            <span class="tech-pill">Fleet KPIs</span>
+          </div>
+          <ul class="project-features-list">
+            <li><span class="feature-check">✅</span> Distributed fleet telemetry without heavy third-party client agents</li>
+            <li><span class="feature-check">✅</span> Automated cron probes capturing CPU, load averages, memory &amp; disk</li>
+            <li><span class="feature-check">✅</span> High-concurrency event aggregator with structured CSV persistence</li>
+          </ul>
+          <div class="project-actions">
+            <a href="https://github.com/aishwar2/Linux_Dashbord" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>View Code</span>
+            </a>
+            <a href="https://github.com/aishwar2/Linux_Dashbord#readme" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Rocky Linux 9.8 ISO Builder -->
+        <div class="project-card">
+          <div class="project-badge-bar">
+            <span class="project-badge enterprise">Enterprise Linux</span>
+            <span class="tech-pill">Toolchain</span>
+          </div>
+          <h3 class="project-title">Rocky Linux 9.8 Custom Enterprise Live ISO Builder</h3>
+          <p class="project-desc">
+            Automated Bash pipeline (<code>build_live_iso.sh</code>) to generate standalone bootable enterprise Linux images. Decouples proprietary Red Hat subscription registration from ISOs for isolated testbed staging.
+          </p>
+          <div class="project-tech-pills">
+            <span class="tech-pill">Bash Pipeline</span>
+            <span class="tech-pill">RHEL 9.8</span>
+            <span class="tech-pill">Rocky Linux</span>
+            <span class="tech-pill">Live ISO</span>
+            <span class="tech-pill">DR Staging</span>
+          </div>
+          <ul class="project-features-list">
+            <li><span class="feature-check">✅</span> Automated build pipeline creating bootable enterprise live environments</li>
+            <li><span class="feature-check">✅</span> Decouples proprietary Red Hat subscription gates for staging &amp; lab tests</li>
+            <li><span class="feature-check">✅</span> Streamlines DC-DR offline disaster recovery verification drills</li>
+          </ul>
+          <div class="project-actions">
+            <a href="https://github.com/aishwar2/rocky_linux9.8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>View Code</span>
+            </a>
+            <a href="https://github.com/aishwar2/rocky_linux9.8#readme" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CERTIFICATIONS SECTION
+       ========================================================================= -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Credentials &amp; Training</span>
+        <h2 class="section-title">Professional Certifications</h2>
+        <p class="section-subtitle">
+          Verified industry credentials spanning Linux administration, MySQL database optimization, cloud, and container orchestration.
+        </p>
+      </div>
+
+      <div class="certs-grid">
+        <!-- Cert 1 -->
+        <div class="cert-card">
+          <div class="cert-logo-circle">☸️</div>
+          <div class="cert-body">
+            <h4 class="cert-title">Certified Kubernetes Administrator (CKA)</h4>
+            <div class="cert-issuer">Linux Foundation / CNCF</div>
+            <span class="cert-status-badge progress">In Progress</span>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="cert-card">
+          <div class="cert-logo-circle">🗄️</div>
+          <div class="cert-body">
+            <h4 class="cert-title">MySQL Administration &amp; Query Optimization</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status-badge verified">Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="cert-card">
+          <div class="cert-logo-circle">🐧</div>
+          <div class="cert-body">
+            <h4 class="cert-title">Linux Systems Administration &amp; Nginx</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status-badge verified">Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="cert-card">
+          <div class="cert-logo-circle">⚙️</div>
+          <div class="cert-body">
+            <h4 class="cert-title">Ansible Infrastructure Automation</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status-badge verified">Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="cert-card">
+          <div class="cert-logo-circle">☁️</div>
+          <div class="cert-body">
+            <h4 class="cert-title">AWS Cloud Fundamentals</h4>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <span class="cert-status-badge verified">Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 6 -->
+        <div class="cert-card">
+          <div class="cert-logo-circle">🐙</div>
+          <div class="cert-body">
+            <h4 class="cert-title">Career Essentials in GitHub Professional</h4>
+            <div class="cert-issuer">GitHub</div>
+            <span class="cert-status-badge verified">Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TESTIMONIALS SECTION
+       ========================================================================= -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Peer &amp; Leadership Endorsements</span>
+        <h2 class="section-title">Professional Recommendations</h2>
+        <p class="section-subtitle">
+          What engineering managers, systems architects, and database peers say about incident triage and operational reliability.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-quote">
+            "Aishwar's command of Linux kernel tuning and low-latency market feed optimization was critical during high-volatility trading days. He consistently kept server jitter to near-zero and resolved complex OS bottlenecks before they impacted trade executions."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">SA</div>
+            <div class="author-info">
+              <h4>Lead Systems Architect</h4>
+              <p>Trading Infrastructure &amp; Low-Latency Feeds</p>
             </div>
-            <div class="timeline-domain">
-              Workstation Fleet Maintenance &amp; Technical Helpdesk
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-quote">
+            "When we executed our major RHEL 7 to 8 fleet migration across 250+ servers, Aishwar drove the pre-flight testing and automated rollback plans. We completed the migration with zero downtime and 100% SLA compliance."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">EM</div>
+            <div class="author-info">
+              <h4>Production Engineering Lead</h4>
+              <p>Enterprise Infrastructure Operations</p>
             </div>
-            <ul class="timeline-highlights">
-              <li>
-                Delivered prompt technical support and remote troubleshooting for distributed workforce systems, maintaining <strong>99%+ workstation availability</strong> across the organization.
-              </li>
-              <li>
-                Diagnosed network connectivity, hardware faults, operating system issues, and access permission errors with rapid turnaround times.
-              </li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="tech-pill">Technical Support</span>
-              <span class="tech-pill">Workstation Fleet</span>
-              <span class="tech-pill">Network Triage</span>
-              <span class="tech-pill">SLA Support</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-quote">
+            "Aishwar has deep MySQL operational expertise. His handling of GTID replication discrepancies, Percona XtraBackup routines, and EXPLAIN query indexing saved countless production incidents and ensured complete data integrity."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">DB</div>
+            <div class="author-info">
+              <h4>Senior Database Administrator</h4>
+              <p>Enterprise MySQL Fleet Services</p>
             </div>
           </div>
         </div>
@@ -457,22 +1284,21 @@
   </section>
 
   <!-- =========================================================================
-       2. EDUCATION & CERTIFICATIONS
+       EDUCATION SECTION
        ========================================================================= -->
   <section class="section" id="education">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Academic Background &amp; Credentials</span>
-        <h2 class="section-title">Education &amp; Professional Certifications</h2>
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">Education &amp; Credentials</h2>
         <p class="section-subtitle">
-          Academic foundation in Information Technology combined with verified cloud, Linux, and database credentials.
+          Academic foundation in Information Technology combined with verified professional production support experience.
         </p>
       </div>
 
-      <!-- Education Banner -->
-      <div class="education-banner" style="margin-bottom: 2.5rem;">
+      <div class="education-banner">
         <div class="edu-main">
-          <div class="edu-icon">🎓</div>
+          <div class="edu-icon-circle">🎓</div>
           <div>
             <div class="edu-degree">Bachelor of Science in Information Technology (B.Sc. IT)</div>
             <div class="edu-uni">University of Mumbai, Thane, Maharashtra, India</div>
@@ -485,572 +1311,15 @@
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            <span>View in Resume</span>
+            <span>View in Resume (PDF)</span>
           </a>
         </div>
       </div>
-
-      <div class="certs-grid">
-        <div class="cert-card">
-          <div class="cert-icon">☸️</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Certified Kubernetes Administrator (CKA)</h4>
-            <div class="cert-issuer">Linux Foundation / CNCF</div>
-            <span class="cert-status in-progress">In Progress</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">🗄️</div>
-          <div class="cert-info">
-            <h4 class="cert-title">MySQL Administration &amp; Query Optimization</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">🐧</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Linux Systems Administration &amp; Nginx</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">⚙️</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Ansible Infrastructure Automation</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">📦</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Kubernetes Fundamentals</h4>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">🐙</div>
-          <div class="cert-info">
-            <h4 class="cert-title">Career Essentials in GitHub Professional</h4>
-            <div class="cert-issuer">GitHub</div>
-            <span class="cert-status completed">Verified</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       3. TECHNICAL COMPETENCIES
-       ========================================================================= -->
-  <section class="section section-alt" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Core Technical Toolkit</span>
-        <h2 class="section-title">Technical Competencies</h2>
-        <p class="section-subtitle">
-          Engineered for mission-critical reliability, low-latency execution, and zero-downtime maintenance across high-scale enterprise environments.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <!-- Linux Administration & Kernel -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
-            </div>
-            <h3 class="skill-category-title">Linux Systems &amp; Kernel</h3>
-          </div>
-          <div class="skill-tags-list">
-            <span class="skill-tag featured">RHEL (7.x, 8.x, 9.x)</span>
-            <span class="skill-tag">Ubuntu Server</span>
-            <span class="skill-tag featured">Solarflare Onload</span>
-            <span class="skill-tag">Leapp In-Place Upgrades</span>
-            <span class="skill-tag">Red Hat Satellite</span>
-            <span class="skill-tag featured">sysctl Kernel Tuning</span>
-            <span class="skill-tag">CPU Core Pinning</span>
-            <span class="skill-tag">NUMA Node Bindings</span>
-            <span class="skill-tag">Network Ring Buffers</span>
-            <span class="skill-tag">LVM &amp; fdisk</span>
-            <span class="skill-tag">firewalld &amp; iptables</span>
-          </div>
-          <p class="skill-notes">
-            Deep experience tuning Linux kernel parameters to eliminate packet drop and jitter across multicast market data feeds.
-          </p>
-        </div>
-
-        <!-- Database Support & MySQL -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-              </svg>
-            </div>
-            <h3 class="skill-category-title">Database Support &amp; SQL</h3>
-          </div>
-          <div class="skill-tags-list">
-            <span class="skill-tag db">MySQL 8.4 &amp; 9.7 Upgrades</span>
-            <span class="skill-tag db">Source-Replica Replication</span>
-            <span class="skill-tag">GTID Discrepancy Resolution</span>
-            <span class="skill-tag db">EXPLAIN PLAN</span>
-            <span class="skill-tag">Index Tuning &amp; Optimization</span>
-            <span class="skill-tag db">Percona XtraBackup</span>
-            <span class="skill-tag">mysqldump &amp; PITR</span>
-            <span class="skill-tag">Binlog Synchronization</span>
-            <span class="skill-tag">Stored Procedures &amp; Triggers</span>
-            <span class="skill-tag">CSV Data Extraction</span>
-          </div>
-          <p class="skill-notes">
-            Managed 25+ production MySQL databases; executed major upgrades with zero data loss and automated recovery workflows.
-          </p>
-        </div>
-
-        <!-- Cloud & Virtualization -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-              </svg>
-            </div>
-            <h3 class="skill-category-title">Cloud &amp; Infrastructure</h3>
-          </div>
-          <div class="skill-tags-list">
-            <span class="skill-tag featured">AWS (EC2, S3, IAM)</span>
-            <span class="skill-tag">AWS VPC &amp; Route 53</span>
-            <span class="skill-tag">AWS CloudWatch</span>
-            <span class="skill-tag featured">AWS Systems Manager (SSM)</span>
-            <span class="skill-tag">AWS CLI</span>
-            <span class="skill-tag">Nutanix AHV</span>
-            <span class="skill-tag">VMware vSphere / ESXi</span>
-            <span class="skill-tag">Bare-Metal Enterprise</span>
-            <span class="skill-tag">Git &amp; Bitbucket</span>
-          </div>
-          <p class="skill-notes">
-            Hybrid enterprise deployment experience spanning bare-metal high-performance clusters and enterprise cloud virtualization.
-          </p>
-        </div>
-
-        <!-- Automation & Scripting -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <h3 class="skill-category-title">Automation &amp; Storage</h3>
-          </div>
-          <div class="skill-tags-list">
-            <span class="skill-tag featured">Bash Shell Scripting</span>
-            <span class="skill-tag featured">Ansible Playbooks</span>
-            <span class="skill-tag">Ansible Vault</span>
-            <span class="skill-tag">Cron Task Automation</span>
-            <span class="skill-tag">Logical Volume Manager (LVM)</span>
-            <span class="skill-tag">Disk Expansion &amp; fdisk</span>
-            <span class="skill-tag">Automated Patch Cycles</span>
-            <span class="skill-tag">60% Task Reduction</span>
-          </div>
-          <p class="skill-notes">
-            Built custom Bash health monitoring plugins and Ansible playbooks to eliminate manual operational toil and enforce configuration baseline.
-          </p>
-        </div>
-
-        <!-- Application & Web Stack -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-            </div>
-            <h3 class="skill-category-title">Application &amp; Web Stack</h3>
-          </div>
-          <div class="skill-tags-list">
-            <span class="skill-tag featured">Nginx Reverse Proxy</span>
-            <span class="skill-tag">Apache HTTP Server</span>
-            <span class="skill-tag">Apache Tomcat</span>
-            <span class="skill-tag">SSL / TLS Certificates</span>
-            <span class="skill-tag">Postfix MTA</span>
-            <span class="skill-tag">HTTP Load Balancing</span>
-            <span class="skill-tag">Web Application Triage</span>
-          </div>
-          <p class="skill-notes">
-            Configured secure reverse proxies, certificate renewal lifecycles, and backend Java/Tomcat connectors for enterprise services.
-          </p>
-        </div>
-
-        <!-- Monitoring & Incident Triage -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
-            </div>
-            <h3 class="skill-category-title">Monitoring, Triage &amp; DR</h3>
-          </div>
-          <div class="skill-tags-list">
-            <span class="skill-tag featured">Nagios Core / XI</span>
-            <span class="skill-tag">systemd Service Control</span>
-            <span class="skill-tag">Journalctl Log Inspection</span>
-            <span class="skill-tag">grep, awk, sed Analysis</span>
-            <span class="skill-tag featured">Root Cause Analysis (RCA)</span>
-            <span class="skill-tag">L2 / L3 Rapid Escalation</span>
-            <span class="skill-tag featured">45-min DC-DR Failover</span>
-            <span class="skill-tag">SLA Management</span>
-          </div>
-          <p class="skill-notes">
-            Expert in rapid log investigation, proactive health alerts, and executing complex disaster recovery drills within tight benchmark windows.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       4. KEY ARCHITECTURAL HIGHLIGHTS & OPEN-SOURCE GIT PROJECTS
-       ========================================================================= -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Systems &amp; Code Showcase</span>
-        <h2 class="section-title">Key Architectural Highlights &amp; Projects</h2>
-        <p class="section-subtitle">
-          Enterprise mission-critical production case studies and open-source infrastructure tools from GitHub.
-        </p>
-      </div>
-
-      <!-- Subsection A: Enterprise Production Case Studies -->
-      <div class="project-subheading">
-        <div class="project-subheading-title">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-            <line x1="6" y1="6" x2="6.01" y2="6"></line>
-            <line x1="6" y1="18" x2="6.01" y2="18"></line>
-          </svg>
-          <span>Enterprise Architectural Case Studies</span>
-        </div>
-        <span class="project-subheading-badge">Financial Fleets &amp; High Availability</span>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Highlight 1: Low Latency Kernel & Onload -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge low-latency">Ultra-Low Latency</span>
-            <span class="project-sla">0% Dropped Packets</span>
-          </div>
-          <h3 class="project-title">Kernel Bypass &amp; Multicast Feed Tuning for Trading Platforms</h3>
-          <p class="project-desc">
-            Configured Solarflare Onload network acceleration on enterprise RHEL servers running low-latency financial trading platforms. Tuned kernel parameters (<code style="color:var(--accent-cyan);">sysctl</code>), isolated CPU core pinning, configured NUMA node bindings, and maximized network ring buffers to eliminate jitter across high-throughput multicast market feeds.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Jitter &amp; Packet Drop:</span>
-              <span class="project-metric-val">Eliminated across market feeds</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Network Stack:</span>
-              <span class="project-metric-val">Solarflare Onload Kernel Bypass</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Kernel Parameters:</span>
-              <span class="project-metric-val">sysctl, isolcpus, numa_node</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">RHEL 8/9</span>
-            <span class="tech-pill">Solarflare Onload</span>
-            <span class="tech-pill">NUMA</span>
-            <span class="tech-pill">CPU Pinning</span>
-            <span class="tech-pill">Multicast</span>
-          </div>
-        </div>
-
-        <!-- Highlight 2: Major Fleet OS Migration -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge migration">Zero Downtime Migration</span>
-            <span class="project-sla">250+ Servers Upgraded</span>
-          </div>
-          <h3 class="project-title">In-Place RHEL 7.9 to 8.10 Fleet Migration via Leapp &amp; Satellite</h3>
-          <p class="project-desc">
-            Planned, orchestrated, and executed large-scale in-place operating system upgrades across a fleet of 250+ enterprise servers using the Leapp utility and Red Hat Satellite. Conducted rigorous pre-flight dependency audits, application binary validations, and automated rollback points with zero service interruption.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Unplanned Downtime:</span>
-              <span class="project-metric-val">0 minutes (100% SLA compliance)</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Fleet Scope:</span>
-              <span class="project-metric-val">250+ Enterprise RHEL Servers</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Tooling:</span>
-              <span class="project-metric-val">Leapp Utility, Red Hat Satellite, LVM</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">RHEL 7.9 -> 8.10</span>
-            <span class="tech-pill">Leapp</span>
-            <span class="tech-pill">Red Hat Satellite</span>
-            <span class="tech-pill">Ansible</span>
-            <span class="tech-pill">LVM</span>
-          </div>
-        </div>
-
-        <!-- Highlight 3: Production MySQL High Availability -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge database">Database High Availability</span>
-            <span class="project-sla">25+ DB Clusters</span>
-          </div>
-          <h3 class="project-title">Production MySQL Fleet Upgrades, GTID Replication &amp; PITR</h3>
-          <p class="project-desc">
-            Spearheaded production MySQL upgrades from version 8.4 to 9.7 with automated pre-upgrade schema checks and zero data loss. Maintained source-replica replication topologies, promptly resolving GTID discrepancies and replication lag. Implemented physical/logical automated backup routines via Percona XtraBackup and mysqldump with routine Point-in-Time Recovery (PITR) restorations.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Data Loss Incident Rate:</span>
-              <span class="project-metric-val">0% (Zero Data Loss)</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Replication Model:</span>
-              <span class="project-metric-val">Source-Replica with GTID &amp; Binlogs</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Backup &amp; Recovery:</span>
-              <span class="project-metric-val">Percona XtraBackup + Verified PITR</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">MySQL 8.4 &amp; 9.7</span>
-            <span class="tech-pill">Percona XtraBackup</span>
-            <span class="tech-pill">GTID</span>
-            <span class="tech-pill">EXPLAIN PLAN</span>
-            <span class="tech-pill">Query Tuning</span>
-          </div>
-        </div>
-
-        <!-- Highlight 4: 45-min DC-DR Failover & Automation -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge automation">Disaster Recovery</span>
-            <span class="project-sla">45-Min Benchmark</span>
-          </div>
-          <h3 class="project-title">Enterprise DC-to-DR Failover &amp; Fleet Automation Architecture</h3>
-          <p class="project-desc">
-            Achieved and validated a 45-minute Data Center (DC) to Disaster Recovery (DR) failover benchmark under stringent SLAs. Automated daily server health checks, log rotations, disk alerts, and configuration deployments using Ansible and custom Bash scripts, slashing repetitive manual operational toil by 60%.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">DR Failover Target:</span>
-              <span class="project-metric-val">Achieved 45-min failover benchmark</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Operational Toil Reduction:</span>
-              <span class="project-metric-val">60% manual tasks automated</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Secrets Management:</span>
-              <span class="project-metric-val">Ansible Vault encrypted variables</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Disaster Recovery</span>
-            <span class="tech-pill">Bash Scripting</span>
-            <span class="tech-pill">Ansible Vault</span>
-            <span class="tech-pill">Nagios XI</span>
-            <span class="tech-pill">LVM</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Subsection B: Open-Source GitHub Engineering Projects -->
-      <div class="project-subheading">
-        <div class="project-subheading-title">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-          <span>Open-Source GitHub Engineering Projects</span>
-        </div>
-        <span class="project-subheading-badge">github.com/aishwar2</span>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- Git Project 1: Web System Monitoring -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge github">Telemetry &amp; Observability</span>
-            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
-              <span>github.com/aishwar2/...web-system-monitoring</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">Flask Web System Telemetry &amp; Linux Health Dashboard</h3>
-          <p class="project-desc">
-            A lightweight, real-time Linux infrastructure observability agent containerized with Docker. Captures kernel OS metrics, CPU core utilization, memory thresholds, disk storage capacity across volumes, and hardware thermal sensors for rapid triage and proactive alert detection.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Monitored Telemetry:</span>
-              <span class="project-metric-val">CPU, RAM, Disks, Sensors, OS Info</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Packaging &amp; Portability:</span>
-              <span class="project-metric-val">Zero-dependency Docker container</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">App Framework:</span>
-              <span class="project-metric-val">Python 3 / Flask Microservice</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Python 3</span>
-            <span class="tech-pill">Flask</span>
-            <span class="tech-pill">Docker</span>
-            <span class="tech-pill">Linux Sensors</span>
-            <span class="tech-pill">REST API</span>
-          </div>
-          <div class="project-footer-actions">
-            <a href="https://github.com/aishwar2/aishwar2-web-system-monitoring" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>View Repository on GitHub</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Git Project 2: Linux_Dashbord -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge github">Fleet Monitoring &amp; Bash</span>
-            <a href="https://github.com/aishwar2/Linux_Dashbord" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
-              <span>github.com/aishwar2/Linux_Dashbord</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">Multi-Node Linux Dashboard (Node.js &amp; Automated Bash Probes)</h3>
-          <p class="project-desc">
-            Distributed Linux server monitoring system designed for high node counts. Employs lightweight, non-intrusive automated Bash probe scripts (<code>collect.sh</code>) to sample system health and stream metrics into an event-driven Node.js dashboard with structured CSV time-series logging.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Collector Engine:</span>
-              <span class="project-metric-val">Automated Bash Probes (collect.sh)</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Backend Runtime:</span>
-              <span class="project-metric-val">Node.js Event Aggregator</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Data Persistence:</span>
-              <span class="project-metric-val">Structured CSV Time-Series spooling</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Bash</span>
-            <span class="tech-pill">Node.js</span>
-            <span class="tech-pill">Cron</span>
-            <span class="tech-pill">CSV Storage</span>
-            <span class="tech-pill">Fleet KPIs</span>
-          </div>
-          <div class="project-footer-actions">
-            <a href="https://github.com/aishwar2/Linux_Dashbord" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>View Repository on GitHub</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Git Project 3: rocky_linux9.8 -->
-        <div class="project-card">
-          <div class="project-badge-bar">
-            <span class="project-badge github">Enterprise Linux &amp; Toolchain</span>
-            <a href="https://github.com/aishwar2/rocky_linux9.8" target="_blank" rel="noopener noreferrer" class="github-repo-link" title="Open repository on GitHub">
-              <span>github.com/aishwar2/rocky_linux9.8</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">Rocky Linux 9.8 Custom Enterprise Live ISO Builder</h3>
-          <p class="project-desc">
-            Automated Bash pipeline (<code>build_live_iso.sh</code>) to generate standalone bootable enterprise Linux images. Decouples proprietary Red Hat subscription registration from RHEL ISOs and configures clean Rocky Linux upstream repositories for isolated testbed staging, DR recovery testing, and fleet verification.
-          </p>
-          <div class="project-metrics-box">
-            <div class="project-metric-item">
-              <span class="project-metric-name">Automation Script:</span>
-              <span class="project-metric-val">build_live_iso.sh toolchain</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">OS Base:</span>
-              <span class="project-metric-val">RHEL 9.8 / Rocky Linux 9.8</span>
-            </div>
-            <div class="project-metric-item">
-              <span class="project-metric-name">Use Case:</span>
-              <span class="project-metric-val">DR Validation &amp; Isolated Lab Staging</span>
-            </div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-pill">Bash Pipeline</span>
-            <span class="tech-pill">RHEL 9.8</span>
-            <span class="tech-pill">Rocky Linux</span>
-            <span class="tech-pill">Live ISO</span>
-            <span class="tech-pill">LVM / Storage</span>
-          </div>
-          <div class="project-footer-actions">
-            <a href="https://github.com/aishwar2/rocky_linux9.8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>View Repository on GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       5. CONTACT SECTION
+       CONTACT SECTION
        ========================================================================= -->
   <section class="section section-alt" id="contact">
     <div class="container">
@@ -1058,72 +1327,90 @@
         <span class="section-tag">Let's Connect</span>
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">
-          Looking for an experienced Application Support Engineer or Linux &amp; MySQL specialist? Whether you have an open opportunity, need low-latency optimization, or simply want to connect — I'd love to hear from you.
+          Looking for an experienced Application Support Engineer or Linux &amp; MySQL specialist? Whether you have an open opportunity or need low-latency optimization, I'm just a message away.
         </p>
       </div>
 
       <div class="contact-grid">
         <!-- Direct Contact Details -->
         <div class="contact-info-card">
-          <h3 class="contact-info-title">Contact Information</h3>
-          <p class="contact-info-desc">
-            Whether you have an open opportunity, need low-latency Linux optimization, or want to discuss enterprise MySQL high availability, I'm just a message away.
+          <h3 class="contact-card-title">Contact Information</h3>
+          <p class="contact-card-desc">
+            Direct dispatch channels for hiring managers and technical recruiters. I typically respond within 24 hours.
           </p>
 
-          <div class="contact-methods">
-            <div class="contact-method-item">
+          <div class="contact-methods-list">
+            <!-- Email -->
+            <div class="contact-method-row">
               <div class="contact-method-left">
-                <span class="contact-method-icon">
+                <div class="contact-method-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
-                </span>
+                </div>
                 <span class="contact-method-text">aishwar253@outlook.com</span>
               </div>
               <button class="copy-btn" data-copy="aishwar253@outlook.com" title="Copy email address">Copy</button>
             </div>
 
-            <div class="contact-method-item">
+            <!-- Phone -->
+            <div class="contact-method-row">
               <div class="contact-method-left">
-                <span class="contact-method-icon">
+                <div class="contact-method-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
-                </span>
+                </div>
                 <span class="contact-method-text">+91 8691 805492</span>
               </div>
               <button class="copy-btn" data-copy="+918691805492" title="Copy phone number">Copy</button>
             </div>
 
-            <div class="contact-method-item">
+            <!-- LinkedIn -->
+            <div class="contact-method-row">
               <div class="contact-method-left">
-                <span class="contact-method-icon">
+                <div class="contact-method-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
-                </span>
+                </div>
                 <span class="contact-method-text">linkedin.com/in/aishwar-yadav</span>
               </div>
               <a href="https://linkedin.com/in/aishwar-yadav" target="_blank" rel="noopener noreferrer" class="copy-btn">Visit</a>
             </div>
 
-            <div class="contact-method-item">
+            <!-- GitHub -->
+            <div class="contact-method-row">
               <div class="contact-method-left">
-                <span class="contact-method-icon">
+                <div class="contact-method-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
-                </span>
+                </div>
                 <span class="contact-method-text">github.com/aishwar2</span>
               </div>
               <a href="https://github.com/aishwar2" target="_blank" rel="noopener noreferrer" class="copy-btn">Visit</a>
             </div>
+
+            <!-- Location -->
+            <div class="contact-method-row">
+              <div class="contact-method-left">
+                <div class="contact-method-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="contact-method-text">Thane, Maharashtra, India</span>
+              </div>
+              <span class="copy-btn" style="cursor: default;">Location</span>
+            </div>
           </div>
 
-          <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-emerald" style="width: 100%;">
+          <a href="assets/Aishwar_Yadav_Resume.pdf" download="Aishwar_Yadav_Resume.pdf" class="btn btn-primary" style="width: 100%;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
@@ -1135,14 +1422,14 @@
 
         <!-- Quick Email Form -->
         <div class="contact-form-card">
-          <h3 class="contact-info-title">Send a Quick Message</h3>
-          <p class="contact-info-desc">
-            Direct dispatch to my inbox. I typically respond within 24 hours.
+          <h3 class="contact-card-title">Send a Quick Message</h3>
+          <p class="contact-card-desc">
+            Direct message to my primary inbox. I am actively reviewing opportunities for Application Support, Linux &amp; MySQL roles.
           </p>
 
           <form id="contact-form">
             <div class="form-group">
-              <label class="form-label" for="sender-name">Your Name / Company</label>
+              <label class="form-label" for="sender-name">Your Name / Organization</label>
               <input type="text" id="sender-name" class="form-input" placeholder="e.g. Hiring Manager at TechCorp" required />
             </div>
 
@@ -1153,15 +1440,15 @@
 
             <div class="form-group">
               <label class="form-label" for="sender-subject">Subject</label>
-              <input type="text" id="sender-subject" class="form-input" value="Opportunity: Application Support Engineer" required />
+              <input type="text" id="sender-subject" class="form-input" value="Opportunity: Application Support Engineer (Linux &amp; MySQL)" required />
             </div>
 
             <div class="form-group">
               <label class="form-label" for="sender-message">Message</label>
-              <textarea id="sender-message" class="form-textarea" placeholder="Hello Aishwar, we reviewed your profile and would love to discuss a role..." required></textarea>
+              <textarea id="sender-message" class="form-textarea" placeholder="Hello Aishwar, we reviewed your profile and would love to schedule a technical discussion..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <button type="submit" class="btn btn-accent" style="width: 100%;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="22" y1="2" x2="11" y2="13"></line>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -1180,17 +1467,17 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-left">
+        <div>
           <span>&copy; 2026 Aishwar Yadav. All rights reserved.</span>
         </div>
-        <div class="footer-tagline">
+        <div class="footer-status-pill">
           <span>● systemd: active (running) | SLAs strictly maintained</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
+  <!-- Floating Back to Top Button -->
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>

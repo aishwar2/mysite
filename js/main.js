@@ -1,5 +1,6 @@
 /* ==========================================================================
    AISHWAR YADAV - PORTFOLIO INTERACTIVE SCRIPTS
+   High-Performance, Accessible, Zero-Dependency ES6+ Implementation
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,13 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initTerminal();
   initCopyActions();
-  initStatsCounter();
   initContactForm();
   initBackToTop();
+  initExpandableExperience();
+  initProjectDetails();
 });
 
 /* --------------------------------------------------------------------------
-   Theme Switcher (Dark / Light)
+   Theme Switcher (Light Default / Dark Option)
    -------------------------------------------------------------------------- */
 function initTheme() {
   const themeToggle = document.getElementById('theme-toggle');
@@ -60,7 +62,7 @@ function updateThemeIcon(theme) {
 }
 
 /* --------------------------------------------------------------------------
-   Mobile Navigation & Scroll Spy
+   Mobile Navigation & Active Scroll Spy
    -------------------------------------------------------------------------- */
 function initNavigation() {
   const menuBtn = document.getElementById('mobile-menu-btn');
@@ -128,7 +130,7 @@ const terminalResponses = {
  CPU Core Pinning: Isolated cores 2-15 on NUMA Node 0 & 1
  Network Ring Buffers: RX 4096 / TX 4096 [Maximized]`,
 
-  mysql: `[mysqladmin -u root -p ping]
+  mysql: `[mysqladmin -u aishwar -p ping]
  mysqld is alive! (MySQL 8.4 -> 9.7 fleet)
  Source-Replica Replication: GTID Synchronized | Lag: 0s
  Backup Status: Percona XtraBackup daily PITR verified
@@ -145,20 +147,20 @@ const terminalResponses = {
  Storage: LVM volume groups & SAN snapshot sync verified`,
 
   skills: `[cat /etc/sysconfig/competencies]
- LINUX   : RHEL (7.x/8.x/9.x), Ubuntu, Leapp, Satellite, Onload, Kernel sysctl
- DB      : MySQL 8.4/9.7, Replication, GTID, EXPLAIN Tuning, XtraBackup
+ LINUX   : RHEL (7/8/9), Rocky Linux, Ubuntu, Onload, Leapp, Satellite, sysctl
+ DB      : MySQL 8.4/9.7, GTID Replication, EXPLAIN Tuning, XtraBackup, PITR
  CLOUD   : AWS (EC2, S3, IAM, VPC, CloudWatch, SSM), VMware, Nutanix
- AUTOMATE: Bash scripting, Ansible, Ansible Vault, Cron, Git
- TRIAGE  : Nagios Core/XI, systemd, journalctl, grep/awk/sed, RCA`,
+ AUTOMATE: Bash Scripting, Ansible, Ansible Vault, Cron, Git
+ TRIAGE  : Nagios Core/XI, Grafana, systemd, journalctl, RCA, 24x7 On-call`,
 
   contact: `[cat /etc/motd/contact_info]
  Name    : Aishwar Yadav
  Title   : Application Support Engineer – Linux & MySQL
  Email   : aishwar253@outlook.com
  Phone   : +91 8691 805492
+ Location: Thane, Maharashtra, India
  LinkedIn: linkedin.com/in/aishwar-yadav
- GitHub  : github.com/aishwar2
- Location: Thane, Maharashtra, India`
+ GitHub  : github.com/aishwar2`
 };
 
 function initTerminal() {
@@ -178,7 +180,7 @@ function executeCommand(key, terminalBody) {
   if (key === 'clear') {
     terminalBody.innerHTML = `
       <div class="terminal-line">
-        <span class="terminal-prompt">aishwar@prod-fleet-01:~$</span> <span class="terminal-cmd"># Screen cleared. Click a quick command below or explore skills.</span>
+        <span class="terminal-prompt">aishwar@prod-fleet-01:~$</span> <span class="terminal-cmd"># Screen cleared. Click a quick command chip below:</span>
       </div>
     `;
     return;
@@ -247,7 +249,7 @@ function showToast(message) {
     document.body.appendChild(toast);
   }
   toast.innerHTML = `
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
     <span>${message}</span>
@@ -259,45 +261,59 @@ function showToast(message) {
 }
 
 /* --------------------------------------------------------------------------
-   Metrics Counter Animation
+   Expandable Experience Details
    -------------------------------------------------------------------------- */
-function initStatsCounter() {
-  const statsElements = document.querySelectorAll('.stat-number');
-  if (!statsElements.length) return;
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseFloat(el.getAttribute('data-target'));
-        const suffix = el.getAttribute('data-suffix') || '';
-        const prefix = el.getAttribute('data-prefix') || '';
-        animateValue(el, 0, target, 1600, prefix, suffix);
-        obs.unobserve(el);
+function initExpandableExperience() {
+  const expandButtons = document.querySelectorAll('.expand-btn');
+  expandButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const isExpanded = targetElement.classList.contains('expanded');
+        if (isExpanded) {
+          targetElement.classList.remove('expanded');
+          btn.innerHTML = `
+            <span>Show Full Details</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          `;
+        } else {
+          targetElement.classList.add('expanded');
+          btn.innerHTML = `
+            <span>Show Less</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          `;
+        }
       }
     });
-  }, { threshold: 0.5 });
-
-  statsElements.forEach(el => observer.observe(el));
+  });
 }
 
-function animateValue(obj, start, end, duration, prefix, suffix) {
-  let startTimestamp = null;
-  const isFloat = end % 1 !== 0;
-
-  const step = (timestamp) => {
-    if (!startTimestamp) startTimestamp = timestamp;
-    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    const easeOutQuad = 1 - (1 - progress) * (1 - progress);
-    const current = easeOutQuad * (end - start) + start;
-    obj.innerHTML = prefix + (isFloat ? current.toFixed(1) : Math.floor(current)) + suffix;
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    } else {
-      obj.innerHTML = prefix + end + suffix;
-    }
-  };
-  window.requestAnimationFrame(step);
+/* --------------------------------------------------------------------------
+   Project Details Toggle
+   -------------------------------------------------------------------------- */
+function initProjectDetails() {
+  const learnMoreBtns = document.querySelectorAll('.project-learn-more-btn');
+  learnMoreBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const detailId = btn.getAttribute('data-project');
+      const detailEl = document.getElementById(detailId);
+      if (detailEl) {
+        const isVisible = detailEl.classList.contains('expanded');
+        if (isVisible) {
+          detailEl.classList.remove('expanded');
+          btn.textContent = 'Learn More';
+        } else {
+          detailEl.classList.add('expanded');
+          btn.textContent = 'Close Details';
+        }
+      }
+    });
+  });
 }
 
 /* --------------------------------------------------------------------------
@@ -309,9 +325,9 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById('sender-name')?.value || 'Recruiter/Manager';
+    const name = document.getElementById('sender-name')?.value || 'Recruiter / Hiring Manager';
     const email = document.getElementById('sender-email')?.value || '';
-    const subject = document.getElementById('sender-subject')?.value || 'Job Opportunity / Technical Inquiry';
+    const subject = document.getElementById('sender-subject')?.value || 'Opportunity: Application Support Engineer';
     const message = document.getElementById('sender-message')?.value || '';
 
     const mailtoLink = `mailto:aishwar253@outlook.com?subject=${encodeURIComponent(subject + ' - via Portfolio from ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
