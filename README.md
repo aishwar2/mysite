@@ -1,7 +1,7 @@
 # Aishwar Yadav — Professional Engineering Portfolio & GitHub Pages Site
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-38bdf8?style=flat&logo=github)](https://aishwar2.github.io/mysite/)
-[![Role](https://img.shields.io/badge/Role-Application%20Support%20Engineer-10b981?style=flat)](https://linkedin.com/in/aishwar-yadav)
+[![Role](https://img.shields.io/badge/Role-Application%20Support%20Engineer-10b981?style=flat)](https://www.linkedin.com/in/aishwaryadav/)
 [![Linux](https://img.shields.io/badge/Fleet-250%2B%20RHEL%20Nodes-f59e0b?style=flat&logo=redhat)](https://aishwar2.github.io/mysite/)
 [![MySQL](https://img.shields.io/badge/Database-MySQL%208.4%2F9.7-0284c7?style=flat&logo=mysql)](https://aishwar2.github.io/mysite/)
 
@@ -125,6 +125,6 @@ Then open your browser and navigate to:
 
 - **Email**: [aishwar253@outlook.com](mailto:aishwar253@outlook.com)
 - **Phone**: +91 8691 805492
-- **LinkedIn**: [linkedin.com/in/aishwar-yadav](https://linkedin.com/in/aishwar-yadav)
+- **LinkedIn**: [linkedin.com/in/aishwaryadav](https://www.linkedin.com/in/aishwaryadav/)
 - **GitHub**: [github.com/aishwar2](https://github.com/aishwar2)
 - **Location**: Mumbai, Maharashtra, India

@@ -196,7 +196,7 @@ const terminalResponses = {
  Email   : aishwar253@outlook.com
  Phone   : +91 8691 805492
  Location: Mumbai, Maharashtra, India
- LinkedIn: linkedin.com/in/aishwar-yadav
+ LinkedIn: https://www.linkedin.com/in/aishwaryadav/
  GitHub  : github.com/aishwar2`
 };
 
