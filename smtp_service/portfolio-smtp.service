@@ -1,0 +1,21 @@
+[Unit]
+Description=Portfolio Direct Outlook SMTP Dispatch Service
+After=network.target
+
+[Service]
+Type=simple
+User=Aishwar
+WorkingDirectory=/home/Aishwar/Documents/resume/smtp_service
+ExecStart=/usr/bin/python3 /home/Aishwar/Documents/resume/smtp_service/smtp_server.py
+Restart=always
+RestartSec=5s
+
+# Security sandboxing
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Environment (optional override)
+# Environment=SMTP_PASSWORD=your_app_password
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+{
+  "smtp_host": "smtp-mail.outlook.com",
+  "smtp_port": 587,
+  "smtp_user": "aishwar253@outlook.com",
+  "smtp_password": "YOUR_OUTLOOK_APP_PASSWORD_HERE",
+  "receiver_email": "aishwar253@outlook.com",
+  "http_host": "0.0.0.0",
+  "http_port": 5000,
+  "allowed_origins": "*"
+}

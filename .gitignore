@@ -9,3 +9,9 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+smtp_service/config.local.json

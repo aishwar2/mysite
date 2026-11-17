@@ -354,23 +354,176 @@ function initProjectDetails() {
 }
 
 /* --------------------------------------------------------------------------
-   Contact Form Handling
+   Contact Form Handling (Direct SMTP Service with Intelligent Fallback)
    -------------------------------------------------------------------------- */
+// Custom direct SMTP microservice endpoint (Python smtplib daemon)
+const DIRECT_SMTP_ENDPOINT = window.PORTFOLIO_SMTP_ENDPOINT || 'http://localhost:5000/api/send';
+const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/aishwar253@outlook.com';
+
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  const submitBtn = document.getElementById('contact-submit-btn');
+  const btnText = document.getElementById('submit-btn-text');
+  const btnIcon = document.getElementById('submit-btn-icon');
+  const statusDiv = document.getElementById('form-status');
+
+  const defaultIconHtml = btnIcon ? btnIcon.outerHTML : '';
+  const defaultText = btnText ? btnText.textContent : 'Send Message';
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('sender-name')?.value || 'Recruiter / Hiring Manager';
-    const email = document.getElementById('sender-email')?.value || '';
-    const subject = document.getElementById('sender-subject')?.value || 'Opportunity: Application Support Engineer';
-    const message = document.getElementById('sender-message')?.value || '';
 
-    const mailtoLink = `mailto:aishwar253@outlook.com?subject=${encodeURIComponent(subject + ' - via Portfolio from ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
+    const name = document.getElementById('sender-name')?.value.trim() || '';
+    const email = document.getElementById('sender-email')?.value.trim() || '';
+    const subject = document.getElementById('sender-subject')?.value.trim() || 'Opportunity: Application Support Engineer';
+    const message = document.getElementById('sender-message')?.value.trim() || '';
 
-    window.location.href = mailtoLink;
-    showToast('Launching email client to message Aishwar...');
+    if (!name || !email || !message) {
+      if (statusDiv) {
+        statusDiv.className = 'form-status error';
+        statusDiv.style.display = 'flex';
+        statusDiv.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div>Please provide your name, email, and message.</div>
+        `;
+      }
+      return;
+    }
+
+    // Set loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Transmitting Message...';
+      const currentIcon = document.getElementById('submit-btn-icon');
+      if (currentIcon) {
+        currentIcon.outerHTML = '<span class="spinner" id="submit-btn-icon"></span>';
+      }
+    }
+    if (statusDiv) {
+      statusDiv.style.display = 'none';
+    }
+
+    let sentSuccessfully = false;
+    let dispatchMethod = 'Direct SMTP';
+
+    // 1. Try Direct SMTP Service first (via Python smtplib / systemd daemon)
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500);
+
+      const smtpResponse = await fetch(DIRECT_SMTP_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ name, email, subject, message }),
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+
+      if (smtpResponse.ok) {
+        const smtpData = await smtpResponse.json().catch(() => ({}));
+        if (smtpData.success) {
+          sentSuccessfully = true;
+          dispatchMethod = 'Direct Outlook SMTP';
+        }
+      }
+    } catch (smtpErr) {
+      // Direct SMTP daemon unreachable (e.g. running on public GitHub Pages without local daemon)
+      console.info('Direct SMTP local endpoint bypassed, attempting cloud gateway fallback...');
+    }
+
+    // 2. If direct SMTP is not responding, fall back to FormSubmit gateway
+    if (!sentSuccessfully) {
+      try {
+        const formData = new FormData(form);
+        const cloudResponse = await fetch(FORMSUBMIT_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        const cloudData = await cloudResponse.json().catch(() => ({}));
+        const isActivationNotice = cloudData.message && /activate|confirm/i.test(cloudData.message);
+
+        if (cloudResponse.ok && !isActivationNotice) {
+          sentSuccessfully = true;
+          dispatchMethod = 'Verified Cloud SMTP Relay';
+        } else if (isActivationNotice) {
+          if (statusDiv) {
+            statusDiv.className = 'form-status success';
+            statusDiv.style.display = 'flex';
+            statusDiv.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <div>
+                <strong>Action Needed:</strong> A one-time activation confirmation has been sent to <strong>aishwar253@outlook.com</strong>. Please check your Outlook inbox and click "Activate Form" to begin receiving messages!
+              </div>
+            `;
+          }
+          showToast('Activation email sent to aishwar253@outlook.com');
+          return;
+        }
+      } catch (cloudErr) {
+        console.warn('Cloud gateway fallback error:', cloudErr);
+      }
+    }
+
+    // Final result handling
+    if (sentSuccessfully) {
+      form.reset();
+      if (statusDiv) {
+        statusDiv.className = 'form-status success';
+        statusDiv.style.display = 'flex';
+        statusDiv.innerHTML = `
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <div>
+            <strong>Message Dispatched!</strong> Delivered directly to <strong>aishwar253@outlook.com</strong> (${dispatchMethod}). Aishwar will review and respond promptly.
+          </div>
+        `;
+      }
+      showToast('Message sent to Aishwar successfully!');
+    } else {
+      // Both programmatic avenues failed; trigger mailto fallback
+      const mailtoLink = `mailto:aishwar253@outlook.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
+      if (statusDiv) {
+        statusDiv.className = 'form-status error';
+        statusDiv.style.display = 'flex';
+        statusDiv.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div>
+            Direct send failed. <a href="${mailtoLink}" style="text-decoration: underline; font-weight: 700; color: inherit;">Click here to send via your email client</a>.
+          </div>
+        `;
+      }
+      showToast('Form submission issue. Please try direct email.');
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      const currentIcon = document.getElementById('submit-btn-icon');
+      if (currentIcon && defaultIconHtml) {
+        currentIcon.outerHTML = defaultIconHtml;
+      }
+      if (btnText) btnText.textContent = defaultText;
+    }
   });
 }
 
